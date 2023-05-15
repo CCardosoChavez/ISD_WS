@@ -1,0 +1,438 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2E16C3B2-57E1-4339-B759-36BBB0A4618F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ISD_WS</RootNamespace>
+    <AssemblyName>ISD_WS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WS_ISD\configuration91.svcinfo" />
+    <None Include="Connected Services\WS_ISD\configuration.svcinfo" />
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerBankTransServiceAddBankTranResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerBankTransServiceApplyPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerBankTransServiceForgetPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerBankTransServiceGetBankAccountsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerBankTransServiceRememberPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerBankTransServiceRetriveForgotenBankTransInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerBankTransServiceRetrivePendingBankTransInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerBankTransServiceRetriveStateOfAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerBankTransServiceRetriveTotalPendingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerBankTransServiceRetriveTransInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerBankTransServiceReversePaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerBankTransServiceTransferPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerBankTransServiceTransferToDepositResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerCurrenciesServiceGetAverangeExchangeTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerCurrenciesServiceGetBuyExchangeTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerCurrenciesServiceGetCurExchRatePerCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerCurrenciesServiceGetExchangeRateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerCurrenciesServiceRegisterAdjustmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerCurrenciesServiceRegisterProfitOrLossResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerCustomerServiceConfirmSyncNewCustomersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerCustomerServiceGetAllCustomersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerCustomerServiceGetCustomerInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerCustomerServiceGetCustomersByTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerCustomerServiceGetFilteredCustomersLinerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerCustomerServiceGetFilteredCustomersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerCustomerServiceGetNewCustomersInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerEmployeeServiceGetSalesEmployeesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerFreightChargesAndDelaysServiceApplyPaymentToLineChargesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerFreightChargesAndDelaysServiceReturnDepositResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerFreightChargesAndDelaysServiceReturnFreightChargesAndDelaysResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerFreightChargesAndDelaysServiceReturnFreightsChargesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerGuaranteeDepositServiceApplyGuaranteeDepositByDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerGuaranteeDepositServiceApplyGuaranteeDepositByTransferResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerGuaranteeDepositServiceReturnGuaranteeDepositByDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerGuaranteeDepositServiceReturnGuaranteeDepositResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerInvoicesServiceCancelInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerInvoicesServiceCollectInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerInvoicesServiceFeeLineCollectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerInvoicesServiceFeeLineInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerInvoicesServiceGetInvoiceNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerInvoicesServiceGetInvoiceXMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerInvoicesServiceNewCreditNoteFromSaleOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerInvoicesServiceNewCreditNoteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerInvoicesServiceNewCreditNoteWithItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerInvoicesServiceNewInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerInvoicesServiceNewInvoiceWithItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerInvoicesServicePr_CollectInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerInvoicesServicePr_GenerateDepositISDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerInvoicesServicePr_GenerateGuaranteeDepositResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerInvoicesServicePr_NewInvoiceWithItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerInvoicesServicePr_RecognizeCreditBalanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerInvoicesServicePr_ReturnRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerInvoicesServiceSettleInvoiceWithCreditNoteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPaymentsServiceAdvancePaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPaymentsServiceCancelPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPaymentsServiceConfirmNewPaymentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPaymentsServiceGetNewPaymentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPaymentsServiceNewInvoiceAdvancePaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPaymentsServiceNewInvoiceByItemsAdvancePaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPaymentsServiceNewInvoiceByItemsMexTerraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPaymentsServiceNewInvoiceByItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPaymentsServiceNewInvoicePaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPaymentsServiceNewInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPaymentsServicePaymentToCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPaymentsServicePr_PaymentToCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPaymentsServicePr_ReturnDepositISDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPaymentsServicePr_ReturnGuaranteeDepositResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPaymentsServiceReserveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPaymentsServiceReturnToCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPaymentsServiceTransferResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPurchaseOrderServiceDevItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPurchaseOrderServiceGetPurchaseOrderItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerPurchaseOrderServiceReceiveItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerVendorServiceConfirmSyncNewVendorsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerVendorServiceGetFiltredVendorsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerVendorServiceGetNewVendorsInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerVendorServiceGetUpdateVendorsInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerVendorServiceGetVendorInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerVendorServiceGetVendorsByNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerVendorServiceGetVendorsByTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerVendorServiceGetVendorsCompleteInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ISD\ISD_WS.WS_ISD.LinerVendorServiceGetVendorTermsOfPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\WS_ISD\LinerServices.wsdl" />
+    <None Include="Connected Services\WS_ISD\LinerServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WS_ISD\LinerServices1.wsdl" />
+    <None Include="Connected Services\WS_ISD\LinerServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WS_ISD\LinerServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WS_ISD\LinerServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WS_ISD\LinerServices4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WS_ISD\LinerServices5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WS_ISD\LinerServices6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WS_ISD\LinerServices7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WS_ISD\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="ISD.asmx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\WS_ISD\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ISD.asmx.cs">
+      <DependentUpon>ISD.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Properties\DataSources\ISD_WS.BL.WS_ISD.zCustomerContract.datasource" />
+    <Content Include="Properties\DataSources\ISD_WS.BL.WS_ISD.zCustomerInfoContract.datasource" />
+    <Content Include="Properties\DataSources\ISD_WS.BL.WS_ISD.zLinerPendingBankRecordContract.datasource" />
+    <Content Include="Properties\DataSources\ISD_WS.BL.WS_ISD.zNewPaymentsSummaryContract.datasource" />
+    <Content Include="Properties\DataSources\ISD_WS.BL.WS_ISD.zPurchaseOrderItemsContract.datasource" />
+    <Content Include="Properties\DataSources\ISD_WS.BL.WS_ISD.zSalesEmployeeContract.datasource" />
+    <Content Include="Properties\DataSources\ISD_WS.BL.WS_ISD.zTermOfPaymentContract.datasource" />
+    <Content Include="Properties\DataSources\ISD_WS.BL.WS_ISD.zVendorContactContract.datasource" />
+    <Content Include="Properties\DataSources\ISD_WS.BL.WS_ISD.zVendorContract.datasource" />
+    <Content Include="Properties\DataSources\ISD_WS.BL.WS_ISD.zVendorInfoContract.datasource" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ISD_WS.BL\ISD_WS.BL.csproj">
+      <Project>{2ef10343-8794-412d-949d-8f659b3a6868}</Project>
+      <Name>ISD_WS.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ISD_WS.Entities\ISD_WS.Entities.csproj">
+      <Project>{5f8ca82c-202c-434e-b940-27141a4e085d}</Project>
+      <Name>ISD_WS.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\WS_ISD\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53873</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53873/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

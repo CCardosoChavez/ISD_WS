@@ -1,0 +1,1429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd3" namespace="http://tempuri.org" />
+      <xsd:import schemaLocation="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd4" namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" />
+      <xsd:import schemaLocation="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd6" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" />
+      <xsd:import schemaLocation="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" />
+      <xsd:import schemaLocation="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+      <xsd:import schemaLocation="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.Framework.Services" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="LinerBankTransServiceGetBankAccountsRequest">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceGetBankAccountsRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceGetBankAccountsRequest_Headers">
+    <wsdl:part xmlns:q1="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q1:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceGetBankAccountsResponse">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceGetBankAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransService_getBankAccounts_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q2:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceApplyPaymentRequest">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceApplyPaymentRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceApplyPaymentRequest_Headers">
+    <wsdl:part xmlns:q3="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q3:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceApplyPaymentResponse">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceApplyPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransService_applyPayment_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q4:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceRetriveForgotenBankTransInfoRequest">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceRetriveForgotenBankTransInfoRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceRetriveForgotenBankTransInfoRequest_Headers">
+    <wsdl:part xmlns:q5="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q5:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceRetriveForgotenBankTransInfoResponse">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceRetriveForgotenBankTransInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransService_retriveForgotenBankTransInfo_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q6:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceRetriveStateOfAccountRequest">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceRetriveStateOfAccountRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceRetriveStateOfAccountRequest_Headers">
+    <wsdl:part xmlns:q7="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q7:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceRetriveStateOfAccountResponse">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceRetriveStateOfAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransService_retriveStateOfAccount_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q8:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceRetriveTotalPendingRequest">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceRetriveTotalPendingRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceRetriveTotalPendingRequest_Headers">
+    <wsdl:part xmlns:q9="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q9:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceRetriveTotalPendingResponse">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceRetriveTotalPendingResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransService_retriveTotalPending_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q10:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceRetriveTransInfoRequest">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceRetriveTransInfoRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceRetriveTransInfoRequest_Headers">
+    <wsdl:part xmlns:q11="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q11:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceRetriveTransInfoResponse">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceRetriveTransInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransService_retriveTransInfo_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q12:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceForgetPaymentRequest">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceForgetPaymentRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceForgetPaymentRequest_Headers">
+    <wsdl:part xmlns:q13="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q13:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceForgetPaymentResponse">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceForgetPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransService_forgetPayment_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q14:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceRememberPaymentRequest">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceRememberPaymentRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceRememberPaymentRequest_Headers">
+    <wsdl:part xmlns:q15="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q15:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceRememberPaymentResponse">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceRememberPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransService_rememberPayment_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q16:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceTransferPaymentRequest">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceTransferPaymentRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceTransferPaymentRequest_Headers">
+    <wsdl:part xmlns:q17="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q17:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceTransferPaymentResponse">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceTransferPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransService_transferPayment_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q18:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceRetrivePendingBankTransInfoRequest">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceRetrivePendingBankTransInfoRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceRetrivePendingBankTransInfoRequest_Headers">
+    <wsdl:part xmlns:q19="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q19:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceRetrivePendingBankTransInfoResponse">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceRetrivePendingBankTransInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransService_retrivePendingBankTransInfo_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q20:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceTransferToDepositRequest">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceTransferToDepositRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceTransferToDepositRequest_Headers">
+    <wsdl:part xmlns:q21="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q21:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceTransferToDepositResponse">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceTransferToDepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransService_transferToDeposit_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q22:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceAddBankTranRequest">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceAddBankTranRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceAddBankTranRequest_Headers">
+    <wsdl:part xmlns:q23="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q23:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceAddBankTranResponse">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceAddBankTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransService_addBankTran_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q24:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceReversePaymentRequest">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceReversePaymentRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceReversePaymentRequest_Headers">
+    <wsdl:part xmlns:q25="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q25:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransServiceReversePaymentResponse">
+    <wsdl:part name="parameters" element="tns:LinerBankTransServiceReversePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerBankTransService_reversePayment_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q26:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesServiceGetAverangeExchangeTypeRequest">
+    <wsdl:part name="parameters" element="tns:LinerCurrenciesServiceGetAverangeExchangeTypeRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesServiceGetAverangeExchangeTypeRequest_Headers">
+    <wsdl:part xmlns:q27="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q27:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesServiceGetAverangeExchangeTypeResponse">
+    <wsdl:part name="parameters" element="tns:LinerCurrenciesServiceGetAverangeExchangeTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesService_getAverangeExchangeType_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q28:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesServiceGetCurExchRatePerCompanyRequest">
+    <wsdl:part name="parameters" element="tns:LinerCurrenciesServiceGetCurExchRatePerCompanyRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesServiceGetCurExchRatePerCompanyRequest_Headers">
+    <wsdl:part xmlns:q29="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q29:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesServiceGetCurExchRatePerCompanyResponse">
+    <wsdl:part name="parameters" element="tns:LinerCurrenciesServiceGetCurExchRatePerCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesService_getCurExchRatePerCompany_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q30:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesServiceRegisterAdjustmentRequest">
+    <wsdl:part name="parameters" element="tns:LinerCurrenciesServiceRegisterAdjustmentRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesServiceRegisterAdjustmentRequest_Headers">
+    <wsdl:part xmlns:q31="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q31:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesServiceRegisterAdjustmentResponse">
+    <wsdl:part name="parameters" element="tns:LinerCurrenciesServiceRegisterAdjustmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesService_registerAdjustment_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q32:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesServiceGetExchangeRateRequest">
+    <wsdl:part name="parameters" element="tns:LinerCurrenciesServiceGetExchangeRateRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesServiceGetExchangeRateRequest_Headers">
+    <wsdl:part xmlns:q33="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q33:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesServiceGetExchangeRateResponse">
+    <wsdl:part name="parameters" element="tns:LinerCurrenciesServiceGetExchangeRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesService_getExchangeRate_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q34:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesServiceGetBuyExchangeTypeRequest">
+    <wsdl:part name="parameters" element="tns:LinerCurrenciesServiceGetBuyExchangeTypeRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesServiceGetBuyExchangeTypeRequest_Headers">
+    <wsdl:part xmlns:q35="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q35:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesServiceGetBuyExchangeTypeResponse">
+    <wsdl:part name="parameters" element="tns:LinerCurrenciesServiceGetBuyExchangeTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesService_getBuyExchangeType_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q36:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesServiceRegisterProfitOrLossRequest">
+    <wsdl:part name="parameters" element="tns:LinerCurrenciesServiceRegisterProfitOrLossRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesServiceRegisterProfitOrLossRequest_Headers">
+    <wsdl:part xmlns:q37="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q37:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesServiceRegisterProfitOrLossResponse">
+    <wsdl:part name="parameters" element="tns:LinerCurrenciesServiceRegisterProfitOrLossResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerCurrenciesService_registerProfitOrLoss_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q38:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceConfirmSyncNewCustomersRequest">
+    <wsdl:part name="parameters" element="tns:LinerCustomerServiceConfirmSyncNewCustomersRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceConfirmSyncNewCustomersRequest_Headers">
+    <wsdl:part xmlns:q39="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q39:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceConfirmSyncNewCustomersResponse">
+    <wsdl:part name="parameters" element="tns:LinerCustomerServiceConfirmSyncNewCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerService_confirmSyncNewCustomers_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q40:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceGetAllCustomersRequest">
+    <wsdl:part name="parameters" element="tns:LinerCustomerServiceGetAllCustomersRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceGetAllCustomersRequest_Headers">
+    <wsdl:part xmlns:q41="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q41:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceGetAllCustomersResponse">
+    <wsdl:part name="parameters" element="tns:LinerCustomerServiceGetAllCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerService_getAllCustomers_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q42:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceGetFilteredCustomersLinerRequest">
+    <wsdl:part name="parameters" element="tns:LinerCustomerServiceGetFilteredCustomersLinerRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceGetFilteredCustomersLinerRequest_Headers">
+    <wsdl:part xmlns:q43="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q43:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceGetFilteredCustomersLinerResponse">
+    <wsdl:part name="parameters" element="tns:LinerCustomerServiceGetFilteredCustomersLinerResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerService_getFilteredCustomersLiner_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q44:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceGetFilteredCustomersRequest">
+    <wsdl:part name="parameters" element="tns:LinerCustomerServiceGetFilteredCustomersRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceGetFilteredCustomersRequest_Headers">
+    <wsdl:part xmlns:q45="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q45:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceGetFilteredCustomersResponse">
+    <wsdl:part name="parameters" element="tns:LinerCustomerServiceGetFilteredCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerService_getFilteredCustomers_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q46:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceGetNewCustomersInfoRequest">
+    <wsdl:part name="parameters" element="tns:LinerCustomerServiceGetNewCustomersInfoRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceGetNewCustomersInfoRequest_Headers">
+    <wsdl:part xmlns:q47="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q47:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceGetNewCustomersInfoResponse">
+    <wsdl:part name="parameters" element="tns:LinerCustomerServiceGetNewCustomersInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerService_getNewCustomersInfo_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q48:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceGetCustomerInfoRequest">
+    <wsdl:part name="parameters" element="tns:LinerCustomerServiceGetCustomerInfoRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceGetCustomerInfoRequest_Headers">
+    <wsdl:part xmlns:q49="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q49:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceGetCustomerInfoResponse">
+    <wsdl:part name="parameters" element="tns:LinerCustomerServiceGetCustomerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerService_getCustomerInfo_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q50:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceGetCustomersByTypeRequest">
+    <wsdl:part name="parameters" element="tns:LinerCustomerServiceGetCustomersByTypeRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceGetCustomersByTypeRequest_Headers">
+    <wsdl:part xmlns:q51="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q51:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerServiceGetCustomersByTypeResponse">
+    <wsdl:part name="parameters" element="tns:LinerCustomerServiceGetCustomersByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerCustomerService_getCustomersByType_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q52:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerEmployeeServiceGetSalesEmployeesRequest">
+    <wsdl:part name="parameters" element="tns:LinerEmployeeServiceGetSalesEmployeesRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerEmployeeServiceGetSalesEmployeesRequest_Headers">
+    <wsdl:part xmlns:q53="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q53:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerEmployeeServiceGetSalesEmployeesResponse">
+    <wsdl:part name="parameters" element="tns:LinerEmployeeServiceGetSalesEmployeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerEmployeeService_getSalesEmployees_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q54:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerFreightChargesAndDelaysServiceReturnFreightChargesAndDelaysRequest">
+    <wsdl:part name="parameters" element="tns:LinerFreightChargesAndDelaysServiceReturnFreightChargesAndDelaysRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerFreightChargesAndDelaysServiceReturnFreightChargesAndDelaysRequest_Headers">
+    <wsdl:part xmlns:q55="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q55:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerFreightChargesAndDelaysServiceReturnFreightChargesAndDelaysResponse">
+    <wsdl:part name="parameters" element="tns:LinerFreightChargesAndDelaysServiceReturnFreightChargesAndDelaysResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerFreightChargesAndDelaysService_ReturnFreightChargesAndDelays_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q56:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerFreightChargesAndDelaysServiceReturnFreightsChargesRequest">
+    <wsdl:part name="parameters" element="tns:LinerFreightChargesAndDelaysServiceReturnFreightsChargesRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerFreightChargesAndDelaysServiceReturnFreightsChargesRequest_Headers">
+    <wsdl:part xmlns:q57="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q57:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerFreightChargesAndDelaysServiceReturnFreightsChargesResponse">
+    <wsdl:part name="parameters" element="tns:LinerFreightChargesAndDelaysServiceReturnFreightsChargesResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerFreightChargesAndDelaysService_returnFreightsCharges_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q58:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerFreightChargesAndDelaysServiceApplyPaymentToLineChargesRequest">
+    <wsdl:part name="parameters" element="tns:LinerFreightChargesAndDelaysServiceApplyPaymentToLineChargesRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerFreightChargesAndDelaysServiceApplyPaymentToLineChargesRequest_Headers">
+    <wsdl:part xmlns:q59="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q59:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerFreightChargesAndDelaysServiceApplyPaymentToLineChargesResponse">
+    <wsdl:part name="parameters" element="tns:LinerFreightChargesAndDelaysServiceApplyPaymentToLineChargesResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerFreightChargesAndDelaysService_applyPaymentToLineCharges_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q60:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerFreightChargesAndDelaysServiceReturnDepositRequest">
+    <wsdl:part name="parameters" element="tns:LinerFreightChargesAndDelaysServiceReturnDepositRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerFreightChargesAndDelaysServiceReturnDepositRequest_Headers">
+    <wsdl:part xmlns:q61="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q61:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerFreightChargesAndDelaysServiceReturnDepositResponse">
+    <wsdl:part name="parameters" element="tns:LinerFreightChargesAndDelaysServiceReturnDepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerFreightChargesAndDelaysService_ReturnDeposit_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q62="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q62:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerGuaranteeDepositServiceReturnGuaranteeDepositRequest">
+    <wsdl:part name="parameters" element="tns:LinerGuaranteeDepositServiceReturnGuaranteeDepositRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerGuaranteeDepositServiceReturnGuaranteeDepositRequest_Headers">
+    <wsdl:part xmlns:q63="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q63:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerGuaranteeDepositServiceReturnGuaranteeDepositResponse">
+    <wsdl:part name="parameters" element="tns:LinerGuaranteeDepositServiceReturnGuaranteeDepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerGuaranteeDepositService_returnGuaranteeDeposit_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q64="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q64:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerGuaranteeDepositServiceReturnGuaranteeDepositByDocumentRequest">
+    <wsdl:part name="parameters" element="tns:LinerGuaranteeDepositServiceReturnGuaranteeDepositByDocumentRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerGuaranteeDepositServiceReturnGuaranteeDepositByDocumentRequest_Headers">
+    <wsdl:part xmlns:q65="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q65:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerGuaranteeDepositServiceReturnGuaranteeDepositByDocumentResponse">
+    <wsdl:part name="parameters" element="tns:LinerGuaranteeDepositServiceReturnGuaranteeDepositByDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerGuaranteeDepositService_returnGuaranteeDepositByDocument_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q66="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q66:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerGuaranteeDepositServiceApplyGuaranteeDepositByDocumentRequest">
+    <wsdl:part name="parameters" element="tns:LinerGuaranteeDepositServiceApplyGuaranteeDepositByDocumentRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerGuaranteeDepositServiceApplyGuaranteeDepositByDocumentRequest_Headers">
+    <wsdl:part xmlns:q67="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q67:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerGuaranteeDepositServiceApplyGuaranteeDepositByDocumentResponse">
+    <wsdl:part name="parameters" element="tns:LinerGuaranteeDepositServiceApplyGuaranteeDepositByDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerGuaranteeDepositService_applyGuaranteeDepositByDocument_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q68="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q68:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerGuaranteeDepositServiceApplyGuaranteeDepositByTransferRequest">
+    <wsdl:part name="parameters" element="tns:LinerGuaranteeDepositServiceApplyGuaranteeDepositByTransferRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerGuaranteeDepositServiceApplyGuaranteeDepositByTransferRequest_Headers">
+    <wsdl:part xmlns:q69="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q69:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerGuaranteeDepositServiceApplyGuaranteeDepositByTransferResponse">
+    <wsdl:part name="parameters" element="tns:LinerGuaranteeDepositServiceApplyGuaranteeDepositByTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerGuaranteeDepositService_applyGuaranteeDepositByTransfer_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q70="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q70:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServicePr_GenerateGuaranteeDepositRequest">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServicePr_GenerateGuaranteeDepositRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServicePr_GenerateGuaranteeDepositRequest_Headers">
+    <wsdl:part xmlns:q71="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q71:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServicePr_GenerateGuaranteeDepositResponse">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServicePr_GenerateGuaranteeDepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesService_pr_GenerateGuaranteeDeposit_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q72="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q72:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceSettleInvoiceWithCreditNoteRequest">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceSettleInvoiceWithCreditNoteRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceSettleInvoiceWithCreditNoteRequest_Headers">
+    <wsdl:part xmlns:q73="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q73:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceSettleInvoiceWithCreditNoteResponse">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceSettleInvoiceWithCreditNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesService_settleInvoiceWithCreditNote_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q74="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q74:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceFeeLineCollectRequest">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceFeeLineCollectRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceFeeLineCollectRequest_Headers">
+    <wsdl:part xmlns:q75="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q75:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceFeeLineCollectResponse">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceFeeLineCollectResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesService_FeeLineCollect_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q76="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q76:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceNewInvoiceWithItemsRequest">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceNewInvoiceWithItemsRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceNewInvoiceWithItemsRequest_Headers">
+    <wsdl:part xmlns:q77="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q77:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceNewInvoiceWithItemsResponse">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceNewInvoiceWithItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesService_newInvoiceWithItems_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q78="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q78:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServicePr_CollectInvoiceRequest">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServicePr_CollectInvoiceRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServicePr_CollectInvoiceRequest_Headers">
+    <wsdl:part xmlns:q79="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q79:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServicePr_CollectInvoiceResponse">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServicePr_CollectInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesService_pr_CollectInvoice_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q80="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q80:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServicePr_GenerateDepositISDRequest">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServicePr_GenerateDepositISDRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServicePr_GenerateDepositISDRequest_Headers">
+    <wsdl:part xmlns:q81="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q81:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServicePr_GenerateDepositISDResponse">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServicePr_GenerateDepositISDResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesService_pr_GenerateDepositISD_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q82="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q82:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceGetInvoiceXMLRequest">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceGetInvoiceXMLRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceGetInvoiceXMLRequest_Headers">
+    <wsdl:part xmlns:q83="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q83:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceGetInvoiceXMLResponse">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceGetInvoiceXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesService_getInvoiceXML_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q84="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q84:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceNewCreditNoteWithItemsRequest">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceNewCreditNoteWithItemsRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceNewCreditNoteWithItemsRequest_Headers">
+    <wsdl:part xmlns:q85="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q85:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceNewCreditNoteWithItemsResponse">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceNewCreditNoteWithItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesService_newCreditNoteWithItems_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q86="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q86:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceNewInvoiceRequest">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceNewInvoiceRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceNewInvoiceRequest_Headers">
+    <wsdl:part xmlns:q87="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q87:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceNewInvoiceResponse">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceNewInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesService_newInvoice_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q88="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q88:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServicePr_NewInvoiceWithItemsRequest">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServicePr_NewInvoiceWithItemsRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServicePr_NewInvoiceWithItemsRequest_Headers">
+    <wsdl:part xmlns:q89="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q89:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServicePr_NewInvoiceWithItemsResponse">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServicePr_NewInvoiceWithItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesService_pr_NewInvoiceWithItems_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q90="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q90:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServicePr_RecognizeCreditBalanceRequest">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServicePr_RecognizeCreditBalanceRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServicePr_RecognizeCreditBalanceRequest_Headers">
+    <wsdl:part xmlns:q91="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q91:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServicePr_RecognizeCreditBalanceResponse">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServicePr_RecognizeCreditBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesService_pr_RecognizeCreditBalance_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q92="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q92:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServicePr_ReturnRequestRequest">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServicePr_ReturnRequestRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServicePr_ReturnRequestRequest_Headers">
+    <wsdl:part xmlns:q93="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q93:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServicePr_ReturnRequestResponse">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServicePr_ReturnRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesService_pr_ReturnRequest_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q94="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q94:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceFeeLineInvoiceRequest">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceFeeLineInvoiceRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceFeeLineInvoiceRequest_Headers">
+    <wsdl:part xmlns:q95="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q95:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceFeeLineInvoiceResponse">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceFeeLineInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesService_FeeLineInvoice_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q96="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q96:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceCollectInvoiceRequest">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceCollectInvoiceRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceCollectInvoiceRequest_Headers">
+    <wsdl:part xmlns:q97="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q97:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceCollectInvoiceResponse">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceCollectInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesService_collectInvoice_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q98="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q98:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceNewCreditNoteRequest">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceNewCreditNoteRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceNewCreditNoteRequest_Headers">
+    <wsdl:part xmlns:q99="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q99:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceNewCreditNoteResponse">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceNewCreditNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesService_newCreditNote_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q100="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q100:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceNewCreditNoteFromSaleOrderRequest">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceNewCreditNoteFromSaleOrderRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceNewCreditNoteFromSaleOrderRequest_Headers">
+    <wsdl:part xmlns:q101="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q101:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceNewCreditNoteFromSaleOrderResponse">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceNewCreditNoteFromSaleOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesService_newCreditNoteFromSaleOrder_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q102="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q102:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceGetInvoiceNumberRequest">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceGetInvoiceNumberRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceGetInvoiceNumberRequest_Headers">
+    <wsdl:part xmlns:q103="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q103:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceGetInvoiceNumberResponse">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceGetInvoiceNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesService_getInvoiceNumber_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q104="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q104:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceCancelInvoiceRequest">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceCancelInvoiceRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceCancelInvoiceRequest_Headers">
+    <wsdl:part xmlns:q105="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q105:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesServiceCancelInvoiceResponse">
+    <wsdl:part name="parameters" element="tns:LinerInvoicesServiceCancelInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerInvoicesService_cancelInvoice_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q106="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q106:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceNewInvoiceRequest">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceNewInvoiceRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceNewInvoiceRequest_Headers">
+    <wsdl:part xmlns:q107="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q107:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceNewInvoiceResponse">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceNewInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsService_newInvoice_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q108="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q108:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceCancelPaymentRequest">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceCancelPaymentRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceCancelPaymentRequest_Headers">
+    <wsdl:part xmlns:q109="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q109:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceCancelPaymentResponse">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceCancelPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsService_cancelPayment_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q110="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q110:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceReturnToCustomerRequest">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceReturnToCustomerRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceReturnToCustomerRequest_Headers">
+    <wsdl:part xmlns:q111="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q111:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceReturnToCustomerResponse">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceReturnToCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsService_returnToCustomer_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q112="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q112:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceTransferRequest">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceTransferRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceTransferRequest_Headers">
+    <wsdl:part xmlns:q113="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q113:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceTransferResponse">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsService_transfer_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q114="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q114:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceReserveRequest">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceReserveRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceReserveRequest_Headers">
+    <wsdl:part xmlns:q115="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q115:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceReserveResponse">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceReserveResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsService_reserve_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q116="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q116:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceNewInvoiceByItemsMexTerraRequest">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceNewInvoiceByItemsMexTerraRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceNewInvoiceByItemsMexTerraRequest_Headers">
+    <wsdl:part xmlns:q117="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q117:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceNewInvoiceByItemsMexTerraResponse">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceNewInvoiceByItemsMexTerraResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsService_newInvoiceByItemsMexTerra_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q118="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q118:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceAdvancePaymentRequest">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceAdvancePaymentRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceAdvancePaymentRequest_Headers">
+    <wsdl:part xmlns:q119="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q119:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceAdvancePaymentResponse">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceAdvancePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsService_advancePayment_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q120="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q120:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceGetNewPaymentsRequest">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceGetNewPaymentsRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceGetNewPaymentsRequest_Headers">
+    <wsdl:part xmlns:q121="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q121:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceGetNewPaymentsResponse">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceGetNewPaymentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsService_getNewPayments_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q122="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q122:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceNewInvoiceByItemsRequest">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceNewInvoiceByItemsRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceNewInvoiceByItemsRequest_Headers">
+    <wsdl:part xmlns:q123="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q123:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceNewInvoiceByItemsResponse">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceNewInvoiceByItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsService_newInvoiceByItems_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q124="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q124:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServicePr_ReturnGuaranteeDepositRequest">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServicePr_ReturnGuaranteeDepositRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServicePr_ReturnGuaranteeDepositRequest_Headers">
+    <wsdl:part xmlns:q125="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q125:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServicePr_ReturnGuaranteeDepositResponse">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServicePr_ReturnGuaranteeDepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsService_pr_ReturnGuaranteeDeposit_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q126="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q126:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceConfirmNewPaymentsRequest">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceConfirmNewPaymentsRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceConfirmNewPaymentsRequest_Headers">
+    <wsdl:part xmlns:q127="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q127:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceConfirmNewPaymentsResponse">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceConfirmNewPaymentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsService_confirmNewPayments_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q128="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q128:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceNewInvoiceByItemsAdvancePaymentRequest">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceNewInvoiceByItemsAdvancePaymentRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceNewInvoiceByItemsAdvancePaymentRequest_Headers">
+    <wsdl:part xmlns:q129="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q129:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceNewInvoiceByItemsAdvancePaymentResponse">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceNewInvoiceByItemsAdvancePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsService_newInvoiceByItemsAdvancePayment_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q130="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q130:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceNewInvoiceAdvancePaymentRequest">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceNewInvoiceAdvancePaymentRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceNewInvoiceAdvancePaymentRequest_Headers">
+    <wsdl:part xmlns:q131="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q131:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceNewInvoiceAdvancePaymentResponse">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceNewInvoiceAdvancePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsService_newInvoiceAdvancePayment_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q132="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q132:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServicePr_PaymentToCustomerRequest">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServicePr_PaymentToCustomerRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServicePr_PaymentToCustomerRequest_Headers">
+    <wsdl:part xmlns:q133="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q133:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServicePr_PaymentToCustomerResponse">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServicePr_PaymentToCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsService_pr_PaymentToCustomer_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q134="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q134:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceNewInvoicePaymentRequest">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceNewInvoicePaymentRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceNewInvoicePaymentRequest_Headers">
+    <wsdl:part xmlns:q135="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q135:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServiceNewInvoicePaymentResponse">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServiceNewInvoicePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsService_newInvoicePayment_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q136="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q136:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServicePr_ReturnDepositISDRequest">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServicePr_ReturnDepositISDRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServicePr_ReturnDepositISDRequest_Headers">
+    <wsdl:part xmlns:q137="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q137:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServicePr_ReturnDepositISDResponse">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServicePr_ReturnDepositISDResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsService_pr_ReturnDepositISD_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q138="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q138:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServicePaymentToCustomerRequest">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServicePaymentToCustomerRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServicePaymentToCustomerRequest_Headers">
+    <wsdl:part xmlns:q139="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q139:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsServicePaymentToCustomerResponse">
+    <wsdl:part name="parameters" element="tns:LinerPaymentsServicePaymentToCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPaymentsService_paymentToCustomer_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q140="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q140:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPurchaseOrderServiceReceiveItemsRequest">
+    <wsdl:part name="parameters" element="tns:LinerPurchaseOrderServiceReceiveItemsRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPurchaseOrderServiceReceiveItemsRequest_Headers">
+    <wsdl:part xmlns:q141="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q141:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPurchaseOrderServiceReceiveItemsResponse">
+    <wsdl:part name="parameters" element="tns:LinerPurchaseOrderServiceReceiveItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPurchaseOrderService_receiveItems_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q142="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q142:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPurchaseOrderServiceDevItemsRequest">
+    <wsdl:part name="parameters" element="tns:LinerPurchaseOrderServiceDevItemsRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPurchaseOrderServiceDevItemsRequest_Headers">
+    <wsdl:part xmlns:q143="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q143:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPurchaseOrderServiceDevItemsResponse">
+    <wsdl:part name="parameters" element="tns:LinerPurchaseOrderServiceDevItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPurchaseOrderService_devItems_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q144="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q144:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerPurchaseOrderServiceGetPurchaseOrderItemsRequest">
+    <wsdl:part name="parameters" element="tns:LinerPurchaseOrderServiceGetPurchaseOrderItemsRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerPurchaseOrderServiceGetPurchaseOrderItemsRequest_Headers">
+    <wsdl:part xmlns:q145="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q145:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerPurchaseOrderServiceGetPurchaseOrderItemsResponse">
+    <wsdl:part name="parameters" element="tns:LinerPurchaseOrderServiceGetPurchaseOrderItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerPurchaseOrderService_getPurchaseOrderItems_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q146="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q146:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetVendorTermsOfPaymentRequest">
+    <wsdl:part name="parameters" element="tns:LinerVendorServiceGetVendorTermsOfPaymentRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetVendorTermsOfPaymentRequest_Headers">
+    <wsdl:part xmlns:q147="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q147:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetVendorTermsOfPaymentResponse">
+    <wsdl:part name="parameters" element="tns:LinerVendorServiceGetVendorTermsOfPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorService_getVendorTermsOfPayment_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q148="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q148:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceConfirmSyncNewVendorsRequest">
+    <wsdl:part name="parameters" element="tns:LinerVendorServiceConfirmSyncNewVendorsRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceConfirmSyncNewVendorsRequest_Headers">
+    <wsdl:part xmlns:q149="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q149:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceConfirmSyncNewVendorsResponse">
+    <wsdl:part name="parameters" element="tns:LinerVendorServiceConfirmSyncNewVendorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorService_confirmSyncNewVendors_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q150="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q150:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetVendorsByTypeRequest">
+    <wsdl:part name="parameters" element="tns:LinerVendorServiceGetVendorsByTypeRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetVendorsByTypeRequest_Headers">
+    <wsdl:part xmlns:q151="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q151:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetVendorsByTypeResponse">
+    <wsdl:part name="parameters" element="tns:LinerVendorServiceGetVendorsByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorService_getVendorsByType_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q152="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q152:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetFiltredVendorsRequest">
+    <wsdl:part name="parameters" element="tns:LinerVendorServiceGetFiltredVendorsRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetFiltredVendorsRequest_Headers">
+    <wsdl:part xmlns:q153="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q153:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetFiltredVendorsResponse">
+    <wsdl:part name="parameters" element="tns:LinerVendorServiceGetFiltredVendorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorService_getFiltredVendors_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q154="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q154:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetVendorsByNameRequest">
+    <wsdl:part name="parameters" element="tns:LinerVendorServiceGetVendorsByNameRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetVendorsByNameRequest_Headers">
+    <wsdl:part xmlns:q155="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q155:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetVendorsByNameResponse">
+    <wsdl:part name="parameters" element="tns:LinerVendorServiceGetVendorsByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorService_getVendorsByName_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q156="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q156:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetUpdateVendorsInfoRequest">
+    <wsdl:part name="parameters" element="tns:LinerVendorServiceGetUpdateVendorsInfoRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetUpdateVendorsInfoRequest_Headers">
+    <wsdl:part xmlns:q157="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q157:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetUpdateVendorsInfoResponse">
+    <wsdl:part name="parameters" element="tns:LinerVendorServiceGetUpdateVendorsInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorService_getUpdateVendorsInfo_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q158="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q158:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetNewVendorsInfoRequest">
+    <wsdl:part name="parameters" element="tns:LinerVendorServiceGetNewVendorsInfoRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetNewVendorsInfoRequest_Headers">
+    <wsdl:part xmlns:q159="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q159:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetNewVendorsInfoResponse">
+    <wsdl:part name="parameters" element="tns:LinerVendorServiceGetNewVendorsInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorService_getNewVendorsInfo_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q160="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q160:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetVendorInfoRequest">
+    <wsdl:part name="parameters" element="tns:LinerVendorServiceGetVendorInfoRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetVendorInfoRequest_Headers">
+    <wsdl:part xmlns:q161="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q161:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetVendorInfoResponse">
+    <wsdl:part name="parameters" element="tns:LinerVendorServiceGetVendorInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorService_getVendorInfo_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q162="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q162:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetVendorsCompleteInfoRequest">
+    <wsdl:part name="parameters" element="tns:LinerVendorServiceGetVendorsCompleteInfoRequest" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetVendorsCompleteInfoRequest_Headers">
+    <wsdl:part xmlns:q163="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q163:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorServiceGetVendorsCompleteInfoResponse">
+    <wsdl:part name="parameters" element="tns:LinerVendorServiceGetVendorsCompleteInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinerVendorService_getVendorsCompleteInfo_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q164="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q164:AifFault" />
+  </wsdl:message>
+  <wsdl:portType name="LinerBankTransService">
+    <wsdl:operation name="getBankAccounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerBankTransService/getBankAccounts" name="LinerBankTransServiceGetBankAccountsRequest" message="tns:LinerBankTransServiceGetBankAccountsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerBankTransService/getBankAccountsResponse" name="LinerBankTransServiceGetBankAccountsResponse" message="tns:LinerBankTransServiceGetBankAccountsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerBankTransService/getBankAccountsAifFaultFault" name="AifFaultFault" message="tns:LinerBankTransService_getBankAccounts_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="applyPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerBankTransService/applyPayment" name="LinerBankTransServiceApplyPaymentRequest" message="tns:LinerBankTransServiceApplyPaymentRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerBankTransService/applyPaymentResponse" name="LinerBankTransServiceApplyPaymentResponse" message="tns:LinerBankTransServiceApplyPaymentResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerBankTransService/applyPaymentAifFaultFault" name="AifFaultFault" message="tns:LinerBankTransService_applyPayment_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retriveForgotenBankTransInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerBankTransService/retriveForgotenBankTransInfo" name="LinerBankTransServiceRetriveForgotenBankTransInfoRequest" message="tns:LinerBankTransServiceRetriveForgotenBankTransInfoRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerBankTransService/retriveForgotenBankTransInfoResponse" name="LinerBankTransServiceRetriveForgotenBankTransInfoResponse" message="tns:LinerBankTransServiceRetriveForgotenBankTransInfoResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerBankTransService/retriveForgotenBankTransInfoAifFaultFault" name="AifFaultFault" message="tns:LinerBankTransService_retriveForgotenBankTransInfo_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retriveStateOfAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerBankTransService/retriveStateOfAccount" name="LinerBankTransServiceRetriveStateOfAccountRequest" message="tns:LinerBankTransServiceRetriveStateOfAccountRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerBankTransService/retriveStateOfAccountResponse" name="LinerBankTransServiceRetriveStateOfAccountResponse" message="tns:LinerBankTransServiceRetriveStateOfAccountResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerBankTransService/retriveStateOfAccountAifFaultFault" name="AifFaultFault" message="tns:LinerBankTransService_retriveStateOfAccount_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retriveTotalPending">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerBankTransService/retriveTotalPending" name="LinerBankTransServiceRetriveTotalPendingRequest" message="tns:LinerBankTransServiceRetriveTotalPendingRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerBankTransService/retriveTotalPendingResponse" name="LinerBankTransServiceRetriveTotalPendingResponse" message="tns:LinerBankTransServiceRetriveTotalPendingResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerBankTransService/retriveTotalPendingAifFaultFault" name="AifFaultFault" message="tns:LinerBankTransService_retriveTotalPending_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retriveTransInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerBankTransService/retriveTransInfo" name="LinerBankTransServiceRetriveTransInfoRequest" message="tns:LinerBankTransServiceRetriveTransInfoRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerBankTransService/retriveTransInfoResponse" name="LinerBankTransServiceRetriveTransInfoResponse" message="tns:LinerBankTransServiceRetriveTransInfoResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerBankTransService/retriveTransInfoAifFaultFault" name="AifFaultFault" message="tns:LinerBankTransService_retriveTransInfo_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="forgetPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerBankTransService/forgetPayment" name="LinerBankTransServiceForgetPaymentRequest" message="tns:LinerBankTransServiceForgetPaymentRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerBankTransService/forgetPaymentResponse" name="LinerBankTransServiceForgetPaymentResponse" message="tns:LinerBankTransServiceForgetPaymentResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerBankTransService/forgetPaymentAifFaultFault" name="AifFaultFault" message="tns:LinerBankTransService_forgetPayment_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="rememberPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerBankTransService/rememberPayment" name="LinerBankTransServiceRememberPaymentRequest" message="tns:LinerBankTransServiceRememberPaymentRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerBankTransService/rememberPaymentResponse" name="LinerBankTransServiceRememberPaymentResponse" message="tns:LinerBankTransServiceRememberPaymentResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerBankTransService/rememberPaymentAifFaultFault" name="AifFaultFault" message="tns:LinerBankTransService_rememberPayment_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="transferPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerBankTransService/transferPayment" name="LinerBankTransServiceTransferPaymentRequest" message="tns:LinerBankTransServiceTransferPaymentRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerBankTransService/transferPaymentResponse" name="LinerBankTransServiceTransferPaymentResponse" message="tns:LinerBankTransServiceTransferPaymentResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerBankTransService/transferPaymentAifFaultFault" name="AifFaultFault" message="tns:LinerBankTransService_transferPayment_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retrivePendingBankTransInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerBankTransService/retrivePendingBankTransInfo" name="LinerBankTransServiceRetrivePendingBankTransInfoRequest" message="tns:LinerBankTransServiceRetrivePendingBankTransInfoRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerBankTransService/retrivePendingBankTransInfoResponse" name="LinerBankTransServiceRetrivePendingBankTransInfoResponse" message="tns:LinerBankTransServiceRetrivePendingBankTransInfoResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerBankTransService/retrivePendingBankTransInfoAifFaultFault" name="AifFaultFault" message="tns:LinerBankTransService_retrivePendingBankTransInfo_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="transferToDeposit">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerBankTransService/transferToDeposit" name="LinerBankTransServiceTransferToDepositRequest" message="tns:LinerBankTransServiceTransferToDepositRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerBankTransService/transferToDepositResponse" name="LinerBankTransServiceTransferToDepositResponse" message="tns:LinerBankTransServiceTransferToDepositResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerBankTransService/transferToDepositAifFaultFault" name="AifFaultFault" message="tns:LinerBankTransService_transferToDeposit_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addBankTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerBankTransService/addBankTran" name="LinerBankTransServiceAddBankTranRequest" message="tns:LinerBankTransServiceAddBankTranRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerBankTransService/addBankTranResponse" name="LinerBankTransServiceAddBankTranResponse" message="tns:LinerBankTransServiceAddBankTranResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerBankTransService/addBankTranAifFaultFault" name="AifFaultFault" message="tns:LinerBankTransService_addBankTran_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="reversePayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerBankTransService/reversePayment" name="LinerBankTransServiceReversePaymentRequest" message="tns:LinerBankTransServiceReversePaymentRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerBankTransService/reversePaymentResponse" name="LinerBankTransServiceReversePaymentResponse" message="tns:LinerBankTransServiceReversePaymentResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerBankTransService/reversePaymentAifFaultFault" name="AifFaultFault" message="tns:LinerBankTransService_reversePayment_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LinerCurrenciesService">
+    <wsdl:operation name="getAverangeExchangeType">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerCurrenciesService/getAverangeExchangeType" name="LinerCurrenciesServiceGetAverangeExchangeTypeRequest" message="tns:LinerCurrenciesServiceGetAverangeExchangeTypeRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerCurrenciesService/getAverangeExchangeTypeResponse" name="LinerCurrenciesServiceGetAverangeExchangeTypeResponse" message="tns:LinerCurrenciesServiceGetAverangeExchangeTypeResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerCurrenciesService/getAverangeExchangeTypeAifFaultFault" name="AifFaultFault" message="tns:LinerCurrenciesService_getAverangeExchangeType_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCurExchRatePerCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerCurrenciesService/getCurExchRatePerCompany" name="LinerCurrenciesServiceGetCurExchRatePerCompanyRequest" message="tns:LinerCurrenciesServiceGetCurExchRatePerCompanyRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerCurrenciesService/getCurExchRatePerCompanyResponse" name="LinerCurrenciesServiceGetCurExchRatePerCompanyResponse" message="tns:LinerCurrenciesServiceGetCurExchRatePerCompanyResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerCurrenciesService/getCurExchRatePerCompanyAifFaultFault" name="AifFaultFault" message="tns:LinerCurrenciesService_getCurExchRatePerCompany_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registerAdjustment">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerCurrenciesService/registerAdjustment" name="LinerCurrenciesServiceRegisterAdjustmentRequest" message="tns:LinerCurrenciesServiceRegisterAdjustmentRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerCurrenciesService/registerAdjustmentResponse" name="LinerCurrenciesServiceRegisterAdjustmentResponse" message="tns:LinerCurrenciesServiceRegisterAdjustmentResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerCurrenciesService/registerAdjustmentAifFaultFault" name="AifFaultFault" message="tns:LinerCurrenciesService_registerAdjustment_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getExchangeRate">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerCurrenciesService/getExchangeRate" name="LinerCurrenciesServiceGetExchangeRateRequest" message="tns:LinerCurrenciesServiceGetExchangeRateRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerCurrenciesService/getExchangeRateResponse" name="LinerCurrenciesServiceGetExchangeRateResponse" message="tns:LinerCurrenciesServiceGetExchangeRateResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerCurrenciesService/getExchangeRateAifFaultFault" name="AifFaultFault" message="tns:LinerCurrenciesService_getExchangeRate_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getBuyExchangeType">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerCurrenciesService/getBuyExchangeType" name="LinerCurrenciesServiceGetBuyExchangeTypeRequest" message="tns:LinerCurrenciesServiceGetBuyExchangeTypeRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerCurrenciesService/getBuyExchangeTypeResponse" name="LinerCurrenciesServiceGetBuyExchangeTypeResponse" message="tns:LinerCurrenciesServiceGetBuyExchangeTypeResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerCurrenciesService/getBuyExchangeTypeAifFaultFault" name="AifFaultFault" message="tns:LinerCurrenciesService_getBuyExchangeType_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registerProfitOrLoss">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerCurrenciesService/registerProfitOrLoss" name="LinerCurrenciesServiceRegisterProfitOrLossRequest" message="tns:LinerCurrenciesServiceRegisterProfitOrLossRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerCurrenciesService/registerProfitOrLossResponse" name="LinerCurrenciesServiceRegisterProfitOrLossResponse" message="tns:LinerCurrenciesServiceRegisterProfitOrLossResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerCurrenciesService/registerProfitOrLossAifFaultFault" name="AifFaultFault" message="tns:LinerCurrenciesService_registerProfitOrLoss_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LinerCustomerService">
+    <wsdl:operation name="confirmSyncNewCustomers">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerCustomerService/confirmSyncNewCustomers" name="LinerCustomerServiceConfirmSyncNewCustomersRequest" message="tns:LinerCustomerServiceConfirmSyncNewCustomersRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerCustomerService/confirmSyncNewCustomersResponse" name="LinerCustomerServiceConfirmSyncNewCustomersResponse" message="tns:LinerCustomerServiceConfirmSyncNewCustomersResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerCustomerService/confirmSyncNewCustomersAifFaultFault" name="AifFaultFault" message="tns:LinerCustomerService_confirmSyncNewCustomers_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllCustomers">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerCustomerService/getAllCustomers" name="LinerCustomerServiceGetAllCustomersRequest" message="tns:LinerCustomerServiceGetAllCustomersRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerCustomerService/getAllCustomersResponse" name="LinerCustomerServiceGetAllCustomersResponse" message="tns:LinerCustomerServiceGetAllCustomersResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerCustomerService/getAllCustomersAifFaultFault" name="AifFaultFault" message="tns:LinerCustomerService_getAllCustomers_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFilteredCustomersLiner">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerCustomerService/getFilteredCustomersLiner" name="LinerCustomerServiceGetFilteredCustomersLinerRequest" message="tns:LinerCustomerServiceGetFilteredCustomersLinerRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerCustomerService/getFilteredCustomersLinerResponse" name="LinerCustomerServiceGetFilteredCustomersLinerResponse" message="tns:LinerCustomerServiceGetFilteredCustomersLinerResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerCustomerService/getFilteredCustomersLinerAifFaultFault" name="AifFaultFault" message="tns:LinerCustomerService_getFilteredCustomersLiner_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFilteredCustomers">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerCustomerService/getFilteredCustomers" name="LinerCustomerServiceGetFilteredCustomersRequest" message="tns:LinerCustomerServiceGetFilteredCustomersRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerCustomerService/getFilteredCustomersResponse" name="LinerCustomerServiceGetFilteredCustomersResponse" message="tns:LinerCustomerServiceGetFilteredCustomersResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerCustomerService/getFilteredCustomersAifFaultFault" name="AifFaultFault" message="tns:LinerCustomerService_getFilteredCustomers_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNewCustomersInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerCustomerService/getNewCustomersInfo" name="LinerCustomerServiceGetNewCustomersInfoRequest" message="tns:LinerCustomerServiceGetNewCustomersInfoRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerCustomerService/getNewCustomersInfoResponse" name="LinerCustomerServiceGetNewCustomersInfoResponse" message="tns:LinerCustomerServiceGetNewCustomersInfoResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerCustomerService/getNewCustomersInfoAifFaultFault" name="AifFaultFault" message="tns:LinerCustomerService_getNewCustomersInfo_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerCustomerService/getCustomerInfo" name="LinerCustomerServiceGetCustomerInfoRequest" message="tns:LinerCustomerServiceGetCustomerInfoRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerCustomerService/getCustomerInfoResponse" name="LinerCustomerServiceGetCustomerInfoResponse" message="tns:LinerCustomerServiceGetCustomerInfoResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerCustomerService/getCustomerInfoAifFaultFault" name="AifFaultFault" message="tns:LinerCustomerService_getCustomerInfo_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomersByType">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerCustomerService/getCustomersByType" name="LinerCustomerServiceGetCustomersByTypeRequest" message="tns:LinerCustomerServiceGetCustomersByTypeRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerCustomerService/getCustomersByTypeResponse" name="LinerCustomerServiceGetCustomersByTypeResponse" message="tns:LinerCustomerServiceGetCustomersByTypeResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerCustomerService/getCustomersByTypeAifFaultFault" name="AifFaultFault" message="tns:LinerCustomerService_getCustomersByType_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LinerEmployeeService">
+    <wsdl:operation name="getSalesEmployees">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerEmployeeService/getSalesEmployees" name="LinerEmployeeServiceGetSalesEmployeesRequest" message="tns:LinerEmployeeServiceGetSalesEmployeesRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerEmployeeService/getSalesEmployeesResponse" name="LinerEmployeeServiceGetSalesEmployeesResponse" message="tns:LinerEmployeeServiceGetSalesEmployeesResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerEmployeeService/getSalesEmployeesAifFaultFault" name="AifFaultFault" message="tns:LinerEmployeeService_getSalesEmployees_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LinerFreightChargesAndDelaysService">
+    <wsdl:operation name="ReturnFreightChargesAndDelays">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerFreightChargesAndDelaysService/ReturnFreightChargesAndDelays" name="LinerFreightChargesAndDelaysServiceReturnFreightChargesAndDelaysRequest" message="tns:LinerFreightChargesAndDelaysServiceReturnFreightChargesAndDelaysRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerFreightChargesAndDelaysService/ReturnFreightChargesAndDelaysResponse" name="LinerFreightChargesAndDelaysServiceReturnFreightChargesAndDelaysResponse" message="tns:LinerFreightChargesAndDelaysServiceReturnFreightChargesAndDelaysResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerFreightChargesAndDelaysService/ReturnFreightChargesAndDelaysAifFaultFault" name="AifFaultFault" message="tns:LinerFreightChargesAndDelaysService_ReturnFreightChargesAndDelays_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="returnFreightsCharges">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerFreightChargesAndDelaysService/returnFreightsCharges" name="LinerFreightChargesAndDelaysServiceReturnFreightsChargesRequest" message="tns:LinerFreightChargesAndDelaysServiceReturnFreightsChargesRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerFreightChargesAndDelaysService/returnFreightsChargesResponse" name="LinerFreightChargesAndDelaysServiceReturnFreightsChargesResponse" message="tns:LinerFreightChargesAndDelaysServiceReturnFreightsChargesResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerFreightChargesAndDelaysService/returnFreightsChargesAifFaultFault" name="AifFaultFault" message="tns:LinerFreightChargesAndDelaysService_returnFreightsCharges_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="applyPaymentToLineCharges">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerFreightChargesAndDelaysService/applyPaymentToLineCharges" name="LinerFreightChargesAndDelaysServiceApplyPaymentToLineChargesRequest" message="tns:LinerFreightChargesAndDelaysServiceApplyPaymentToLineChargesRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerFreightChargesAndDelaysService/applyPaymentToLineChargesResponse" name="LinerFreightChargesAndDelaysServiceApplyPaymentToLineChargesResponse" message="tns:LinerFreightChargesAndDelaysServiceApplyPaymentToLineChargesResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerFreightChargesAndDelaysService/applyPaymentToLineChargesAifFaultFault" name="AifFaultFault" message="tns:LinerFreightChargesAndDelaysService_applyPaymentToLineCharges_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnDeposit">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerFreightChargesAndDelaysService/ReturnDeposit" name="LinerFreightChargesAndDelaysServiceReturnDepositRequest" message="tns:LinerFreightChargesAndDelaysServiceReturnDepositRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerFreightChargesAndDelaysService/ReturnDepositResponse" name="LinerFreightChargesAndDelaysServiceReturnDepositResponse" message="tns:LinerFreightChargesAndDelaysServiceReturnDepositResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerFreightChargesAndDelaysService/ReturnDepositAifFaultFault" name="AifFaultFault" message="tns:LinerFreightChargesAndDelaysService_ReturnDeposit_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LinerGuaranteeDepositService">
+    <wsdl:operation name="returnGuaranteeDeposit">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerGuaranteeDepositService/returnGuaranteeDeposit" name="LinerGuaranteeDepositServiceReturnGuaranteeDepositRequest" message="tns:LinerGuaranteeDepositServiceReturnGuaranteeDepositRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerGuaranteeDepositService/returnGuaranteeDepositResponse" name="LinerGuaranteeDepositServiceReturnGuaranteeDepositResponse" message="tns:LinerGuaranteeDepositServiceReturnGuaranteeDepositResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerGuaranteeDepositService/returnGuaranteeDepositAifFaultFault" name="AifFaultFault" message="tns:LinerGuaranteeDepositService_returnGuaranteeDeposit_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="returnGuaranteeDepositByDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerGuaranteeDepositService/returnGuaranteeDepositByDocument" name="LinerGuaranteeDepositServiceReturnGuaranteeDepositByDocumentRequest" message="tns:LinerGuaranteeDepositServiceReturnGuaranteeDepositByDocumentRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerGuaranteeDepositService/returnGuaranteeDepositByDocumentResponse" name="LinerGuaranteeDepositServiceReturnGuaranteeDepositByDocumentResponse" message="tns:LinerGuaranteeDepositServiceReturnGuaranteeDepositByDocumentResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerGuaranteeDepositService/returnGuaranteeDepositByDocumentAifFaultFault" name="AifFaultFault" message="tns:LinerGuaranteeDepositService_returnGuaranteeDepositByDocument_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="applyGuaranteeDepositByDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerGuaranteeDepositService/applyGuaranteeDepositByDocument" name="LinerGuaranteeDepositServiceApplyGuaranteeDepositByDocumentRequest" message="tns:LinerGuaranteeDepositServiceApplyGuaranteeDepositByDocumentRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerGuaranteeDepositService/applyGuaranteeDepositByDocumentResponse" name="LinerGuaranteeDepositServiceApplyGuaranteeDepositByDocumentResponse" message="tns:LinerGuaranteeDepositServiceApplyGuaranteeDepositByDocumentResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerGuaranteeDepositService/applyGuaranteeDepositByDocumentAifFaultFault" name="AifFaultFault" message="tns:LinerGuaranteeDepositService_applyGuaranteeDepositByDocument_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="applyGuaranteeDepositByTransfer">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerGuaranteeDepositService/applyGuaranteeDepositByTransfer" name="LinerGuaranteeDepositServiceApplyGuaranteeDepositByTransferRequest" message="tns:LinerGuaranteeDepositServiceApplyGuaranteeDepositByTransferRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerGuaranteeDepositService/applyGuaranteeDepositByTransferResponse" name="LinerGuaranteeDepositServiceApplyGuaranteeDepositByTransferResponse" message="tns:LinerGuaranteeDepositServiceApplyGuaranteeDepositByTransferResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerGuaranteeDepositService/applyGuaranteeDepositByTransferAifFaultFault" name="AifFaultFault" message="tns:LinerGuaranteeDepositService_applyGuaranteeDepositByTransfer_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LinerInvoicesService">
+    <wsdl:operation name="pr_GenerateGuaranteeDeposit">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerInvoicesService/pr_GenerateGuaranteeDeposit" name="LinerInvoicesServicePr_GenerateGuaranteeDepositRequest" message="tns:LinerInvoicesServicePr_GenerateGuaranteeDepositRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerInvoicesService/pr_GenerateGuaranteeDepositResponse" name="LinerInvoicesServicePr_GenerateGuaranteeDepositResponse" message="tns:LinerInvoicesServicePr_GenerateGuaranteeDepositResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerInvoicesService/pr_GenerateGuaranteeDepositAifFaultFault" name="AifFaultFault" message="tns:LinerInvoicesService_pr_GenerateGuaranteeDeposit_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="settleInvoiceWithCreditNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerInvoicesService/settleInvoiceWithCreditNote" name="LinerInvoicesServiceSettleInvoiceWithCreditNoteRequest" message="tns:LinerInvoicesServiceSettleInvoiceWithCreditNoteRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerInvoicesService/settleInvoiceWithCreditNoteResponse" name="LinerInvoicesServiceSettleInvoiceWithCreditNoteResponse" message="tns:LinerInvoicesServiceSettleInvoiceWithCreditNoteResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerInvoicesService/settleInvoiceWithCreditNoteAifFaultFault" name="AifFaultFault" message="tns:LinerInvoicesService_settleInvoiceWithCreditNote_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FeeLineCollect">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerInvoicesService/FeeLineCollect" name="LinerInvoicesServiceFeeLineCollectRequest" message="tns:LinerInvoicesServiceFeeLineCollectRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerInvoicesService/FeeLineCollectResponse" name="LinerInvoicesServiceFeeLineCollectResponse" message="tns:LinerInvoicesServiceFeeLineCollectResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerInvoicesService/FeeLineCollectAifFaultFault" name="AifFaultFault" message="tns:LinerInvoicesService_FeeLineCollect_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="newInvoiceWithItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerInvoicesService/newInvoiceWithItems" name="LinerInvoicesServiceNewInvoiceWithItemsRequest" message="tns:LinerInvoicesServiceNewInvoiceWithItemsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerInvoicesService/newInvoiceWithItemsResponse" name="LinerInvoicesServiceNewInvoiceWithItemsResponse" message="tns:LinerInvoicesServiceNewInvoiceWithItemsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerInvoicesService/newInvoiceWithItemsAifFaultFault" name="AifFaultFault" message="tns:LinerInvoicesService_newInvoiceWithItems_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pr_CollectInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerInvoicesService/pr_CollectInvoice" name="LinerInvoicesServicePr_CollectInvoiceRequest" message="tns:LinerInvoicesServicePr_CollectInvoiceRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerInvoicesService/pr_CollectInvoiceResponse" name="LinerInvoicesServicePr_CollectInvoiceResponse" message="tns:LinerInvoicesServicePr_CollectInvoiceResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerInvoicesService/pr_CollectInvoiceAifFaultFault" name="AifFaultFault" message="tns:LinerInvoicesService_pr_CollectInvoice_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pr_GenerateDepositISD">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerInvoicesService/pr_GenerateDepositISD" name="LinerInvoicesServicePr_GenerateDepositISDRequest" message="tns:LinerInvoicesServicePr_GenerateDepositISDRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerInvoicesService/pr_GenerateDepositISDResponse" name="LinerInvoicesServicePr_GenerateDepositISDResponse" message="tns:LinerInvoicesServicePr_GenerateDepositISDResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerInvoicesService/pr_GenerateDepositISDAifFaultFault" name="AifFaultFault" message="tns:LinerInvoicesService_pr_GenerateDepositISD_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInvoiceXML">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerInvoicesService/getInvoiceXML" name="LinerInvoicesServiceGetInvoiceXMLRequest" message="tns:LinerInvoicesServiceGetInvoiceXMLRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerInvoicesService/getInvoiceXMLResponse" name="LinerInvoicesServiceGetInvoiceXMLResponse" message="tns:LinerInvoicesServiceGetInvoiceXMLResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerInvoicesService/getInvoiceXMLAifFaultFault" name="AifFaultFault" message="tns:LinerInvoicesService_getInvoiceXML_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="newCreditNoteWithItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerInvoicesService/newCreditNoteWithItems" name="LinerInvoicesServiceNewCreditNoteWithItemsRequest" message="tns:LinerInvoicesServiceNewCreditNoteWithItemsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerInvoicesService/newCreditNoteWithItemsResponse" name="LinerInvoicesServiceNewCreditNoteWithItemsResponse" message="tns:LinerInvoicesServiceNewCreditNoteWithItemsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerInvoicesService/newCreditNoteWithItemsAifFaultFault" name="AifFaultFault" message="tns:LinerInvoicesService_newCreditNoteWithItems_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="newInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerInvoicesService/newInvoice" name="LinerInvoicesServiceNewInvoiceRequest" message="tns:LinerInvoicesServiceNewInvoiceRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerInvoicesService/newInvoiceResponse" name="LinerInvoicesServiceNewInvoiceResponse" message="tns:LinerInvoicesServiceNewInvoiceResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerInvoicesService/newInvoiceAifFaultFault" name="AifFaultFault" message="tns:LinerInvoicesService_newInvoice_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pr_NewInvoiceWithItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerInvoicesService/pr_NewInvoiceWithItems" name="LinerInvoicesServicePr_NewInvoiceWithItemsRequest" message="tns:LinerInvoicesServicePr_NewInvoiceWithItemsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerInvoicesService/pr_NewInvoiceWithItemsResponse" name="LinerInvoicesServicePr_NewInvoiceWithItemsResponse" message="tns:LinerInvoicesServicePr_NewInvoiceWithItemsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerInvoicesService/pr_NewInvoiceWithItemsAifFaultFault" name="AifFaultFault" message="tns:LinerInvoicesService_pr_NewInvoiceWithItems_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pr_RecognizeCreditBalance">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerInvoicesService/pr_RecognizeCreditBalance" name="LinerInvoicesServicePr_RecognizeCreditBalanceRequest" message="tns:LinerInvoicesServicePr_RecognizeCreditBalanceRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerInvoicesService/pr_RecognizeCreditBalanceResponse" name="LinerInvoicesServicePr_RecognizeCreditBalanceResponse" message="tns:LinerInvoicesServicePr_RecognizeCreditBalanceResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerInvoicesService/pr_RecognizeCreditBalanceAifFaultFault" name="AifFaultFault" message="tns:LinerInvoicesService_pr_RecognizeCreditBalance_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pr_ReturnRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerInvoicesService/pr_ReturnRequest" name="LinerInvoicesServicePr_ReturnRequestRequest" message="tns:LinerInvoicesServicePr_ReturnRequestRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerInvoicesService/pr_ReturnRequestResponse" name="LinerInvoicesServicePr_ReturnRequestResponse" message="tns:LinerInvoicesServicePr_ReturnRequestResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerInvoicesService/pr_ReturnRequestAifFaultFault" name="AifFaultFault" message="tns:LinerInvoicesService_pr_ReturnRequest_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FeeLineInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerInvoicesService/FeeLineInvoice" name="LinerInvoicesServiceFeeLineInvoiceRequest" message="tns:LinerInvoicesServiceFeeLineInvoiceRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerInvoicesService/FeeLineInvoiceResponse" name="LinerInvoicesServiceFeeLineInvoiceResponse" message="tns:LinerInvoicesServiceFeeLineInvoiceResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerInvoicesService/FeeLineInvoiceAifFaultFault" name="AifFaultFault" message="tns:LinerInvoicesService_FeeLineInvoice_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="collectInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerInvoicesService/collectInvoice" name="LinerInvoicesServiceCollectInvoiceRequest" message="tns:LinerInvoicesServiceCollectInvoiceRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerInvoicesService/collectInvoiceResponse" name="LinerInvoicesServiceCollectInvoiceResponse" message="tns:LinerInvoicesServiceCollectInvoiceResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerInvoicesService/collectInvoiceAifFaultFault" name="AifFaultFault" message="tns:LinerInvoicesService_collectInvoice_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="newCreditNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerInvoicesService/newCreditNote" name="LinerInvoicesServiceNewCreditNoteRequest" message="tns:LinerInvoicesServiceNewCreditNoteRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerInvoicesService/newCreditNoteResponse" name="LinerInvoicesServiceNewCreditNoteResponse" message="tns:LinerInvoicesServiceNewCreditNoteResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerInvoicesService/newCreditNoteAifFaultFault" name="AifFaultFault" message="tns:LinerInvoicesService_newCreditNote_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="newCreditNoteFromSaleOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerInvoicesService/newCreditNoteFromSaleOrder" name="LinerInvoicesServiceNewCreditNoteFromSaleOrderRequest" message="tns:LinerInvoicesServiceNewCreditNoteFromSaleOrderRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerInvoicesService/newCreditNoteFromSaleOrderResponse" name="LinerInvoicesServiceNewCreditNoteFromSaleOrderResponse" message="tns:LinerInvoicesServiceNewCreditNoteFromSaleOrderResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerInvoicesService/newCreditNoteFromSaleOrderAifFaultFault" name="AifFaultFault" message="tns:LinerInvoicesService_newCreditNoteFromSaleOrder_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInvoiceNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerInvoicesService/getInvoiceNumber" name="LinerInvoicesServiceGetInvoiceNumberRequest" message="tns:LinerInvoicesServiceGetInvoiceNumberRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerInvoicesService/getInvoiceNumberResponse" name="LinerInvoicesServiceGetInvoiceNumberResponse" message="tns:LinerInvoicesServiceGetInvoiceNumberResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerInvoicesService/getInvoiceNumberAifFaultFault" name="AifFaultFault" message="tns:LinerInvoicesService_getInvoiceNumber_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerInvoicesService/cancelInvoice" name="LinerInvoicesServiceCancelInvoiceRequest" message="tns:LinerInvoicesServiceCancelInvoiceRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerInvoicesService/cancelInvoiceResponse" name="LinerInvoicesServiceCancelInvoiceResponse" message="tns:LinerInvoicesServiceCancelInvoiceResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerInvoicesService/cancelInvoiceAifFaultFault" name="AifFaultFault" message="tns:LinerInvoicesService_cancelInvoice_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LinerPaymentsService">
+    <wsdl:operation name="newInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPaymentsService/newInvoice" name="LinerPaymentsServiceNewInvoiceRequest" message="tns:LinerPaymentsServiceNewInvoiceRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPaymentsService/newInvoiceResponse" name="LinerPaymentsServiceNewInvoiceResponse" message="tns:LinerPaymentsServiceNewInvoiceResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPaymentsService/newInvoiceAifFaultFault" name="AifFaultFault" message="tns:LinerPaymentsService_newInvoice_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPaymentsService/cancelPayment" name="LinerPaymentsServiceCancelPaymentRequest" message="tns:LinerPaymentsServiceCancelPaymentRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPaymentsService/cancelPaymentResponse" name="LinerPaymentsServiceCancelPaymentResponse" message="tns:LinerPaymentsServiceCancelPaymentResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPaymentsService/cancelPaymentAifFaultFault" name="AifFaultFault" message="tns:LinerPaymentsService_cancelPayment_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="returnToCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPaymentsService/returnToCustomer" name="LinerPaymentsServiceReturnToCustomerRequest" message="tns:LinerPaymentsServiceReturnToCustomerRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPaymentsService/returnToCustomerResponse" name="LinerPaymentsServiceReturnToCustomerResponse" message="tns:LinerPaymentsServiceReturnToCustomerResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPaymentsService/returnToCustomerAifFaultFault" name="AifFaultFault" message="tns:LinerPaymentsService_returnToCustomer_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="transfer">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPaymentsService/transfer" name="LinerPaymentsServiceTransferRequest" message="tns:LinerPaymentsServiceTransferRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPaymentsService/transferResponse" name="LinerPaymentsServiceTransferResponse" message="tns:LinerPaymentsServiceTransferResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPaymentsService/transferAifFaultFault" name="AifFaultFault" message="tns:LinerPaymentsService_transfer_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="reserve">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPaymentsService/reserve" name="LinerPaymentsServiceReserveRequest" message="tns:LinerPaymentsServiceReserveRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPaymentsService/reserveResponse" name="LinerPaymentsServiceReserveResponse" message="tns:LinerPaymentsServiceReserveResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPaymentsService/reserveAifFaultFault" name="AifFaultFault" message="tns:LinerPaymentsService_reserve_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="newInvoiceByItemsMexTerra">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPaymentsService/newInvoiceByItemsMexTerra" name="LinerPaymentsServiceNewInvoiceByItemsMexTerraRequest" message="tns:LinerPaymentsServiceNewInvoiceByItemsMexTerraRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPaymentsService/newInvoiceByItemsMexTerraResponse" name="LinerPaymentsServiceNewInvoiceByItemsMexTerraResponse" message="tns:LinerPaymentsServiceNewInvoiceByItemsMexTerraResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPaymentsService/newInvoiceByItemsMexTerraAifFaultFault" name="AifFaultFault" message="tns:LinerPaymentsService_newInvoiceByItemsMexTerra_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="advancePayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPaymentsService/advancePayment" name="LinerPaymentsServiceAdvancePaymentRequest" message="tns:LinerPaymentsServiceAdvancePaymentRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPaymentsService/advancePaymentResponse" name="LinerPaymentsServiceAdvancePaymentResponse" message="tns:LinerPaymentsServiceAdvancePaymentResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPaymentsService/advancePaymentAifFaultFault" name="AifFaultFault" message="tns:LinerPaymentsService_advancePayment_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNewPayments">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPaymentsService/getNewPayments" name="LinerPaymentsServiceGetNewPaymentsRequest" message="tns:LinerPaymentsServiceGetNewPaymentsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPaymentsService/getNewPaymentsResponse" name="LinerPaymentsServiceGetNewPaymentsResponse" message="tns:LinerPaymentsServiceGetNewPaymentsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPaymentsService/getNewPaymentsAifFaultFault" name="AifFaultFault" message="tns:LinerPaymentsService_getNewPayments_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="newInvoiceByItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPaymentsService/newInvoiceByItems" name="LinerPaymentsServiceNewInvoiceByItemsRequest" message="tns:LinerPaymentsServiceNewInvoiceByItemsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPaymentsService/newInvoiceByItemsResponse" name="LinerPaymentsServiceNewInvoiceByItemsResponse" message="tns:LinerPaymentsServiceNewInvoiceByItemsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPaymentsService/newInvoiceByItemsAifFaultFault" name="AifFaultFault" message="tns:LinerPaymentsService_newInvoiceByItems_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pr_ReturnGuaranteeDeposit">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPaymentsService/pr_ReturnGuaranteeDeposit" name="LinerPaymentsServicePr_ReturnGuaranteeDepositRequest" message="tns:LinerPaymentsServicePr_ReturnGuaranteeDepositRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPaymentsService/pr_ReturnGuaranteeDepositResponse" name="LinerPaymentsServicePr_ReturnGuaranteeDepositResponse" message="tns:LinerPaymentsServicePr_ReturnGuaranteeDepositResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPaymentsService/pr_ReturnGuaranteeDepositAifFaultFault" name="AifFaultFault" message="tns:LinerPaymentsService_pr_ReturnGuaranteeDeposit_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="confirmNewPayments">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPaymentsService/confirmNewPayments" name="LinerPaymentsServiceConfirmNewPaymentsRequest" message="tns:LinerPaymentsServiceConfirmNewPaymentsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPaymentsService/confirmNewPaymentsResponse" name="LinerPaymentsServiceConfirmNewPaymentsResponse" message="tns:LinerPaymentsServiceConfirmNewPaymentsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPaymentsService/confirmNewPaymentsAifFaultFault" name="AifFaultFault" message="tns:LinerPaymentsService_confirmNewPayments_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="newInvoiceByItemsAdvancePayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPaymentsService/newInvoiceByItemsAdvancePayment" name="LinerPaymentsServiceNewInvoiceByItemsAdvancePaymentRequest" message="tns:LinerPaymentsServiceNewInvoiceByItemsAdvancePaymentRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPaymentsService/newInvoiceByItemsAdvancePaymentResponse" name="LinerPaymentsServiceNewInvoiceByItemsAdvancePaymentResponse" message="tns:LinerPaymentsServiceNewInvoiceByItemsAdvancePaymentResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPaymentsService/newInvoiceByItemsAdvancePaymentAifFaultFault" name="AifFaultFault" message="tns:LinerPaymentsService_newInvoiceByItemsAdvancePayment_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="newInvoiceAdvancePayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPaymentsService/newInvoiceAdvancePayment" name="LinerPaymentsServiceNewInvoiceAdvancePaymentRequest" message="tns:LinerPaymentsServiceNewInvoiceAdvancePaymentRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPaymentsService/newInvoiceAdvancePaymentResponse" name="LinerPaymentsServiceNewInvoiceAdvancePaymentResponse" message="tns:LinerPaymentsServiceNewInvoiceAdvancePaymentResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPaymentsService/newInvoiceAdvancePaymentAifFaultFault" name="AifFaultFault" message="tns:LinerPaymentsService_newInvoiceAdvancePayment_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pr_PaymentToCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPaymentsService/pr_PaymentToCustomer" name="LinerPaymentsServicePr_PaymentToCustomerRequest" message="tns:LinerPaymentsServicePr_PaymentToCustomerRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPaymentsService/pr_PaymentToCustomerResponse" name="LinerPaymentsServicePr_PaymentToCustomerResponse" message="tns:LinerPaymentsServicePr_PaymentToCustomerResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPaymentsService/pr_PaymentToCustomerAifFaultFault" name="AifFaultFault" message="tns:LinerPaymentsService_pr_PaymentToCustomer_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="newInvoicePayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPaymentsService/newInvoicePayment" name="LinerPaymentsServiceNewInvoicePaymentRequest" message="tns:LinerPaymentsServiceNewInvoicePaymentRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPaymentsService/newInvoicePaymentResponse" name="LinerPaymentsServiceNewInvoicePaymentResponse" message="tns:LinerPaymentsServiceNewInvoicePaymentResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPaymentsService/newInvoicePaymentAifFaultFault" name="AifFaultFault" message="tns:LinerPaymentsService_newInvoicePayment_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pr_ReturnDepositISD">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPaymentsService/pr_ReturnDepositISD" name="LinerPaymentsServicePr_ReturnDepositISDRequest" message="tns:LinerPaymentsServicePr_ReturnDepositISDRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPaymentsService/pr_ReturnDepositISDResponse" name="LinerPaymentsServicePr_ReturnDepositISDResponse" message="tns:LinerPaymentsServicePr_ReturnDepositISDResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPaymentsService/pr_ReturnDepositISDAifFaultFault" name="AifFaultFault" message="tns:LinerPaymentsService_pr_ReturnDepositISD_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="paymentToCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPaymentsService/paymentToCustomer" name="LinerPaymentsServicePaymentToCustomerRequest" message="tns:LinerPaymentsServicePaymentToCustomerRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPaymentsService/paymentToCustomerResponse" name="LinerPaymentsServicePaymentToCustomerResponse" message="tns:LinerPaymentsServicePaymentToCustomerResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPaymentsService/paymentToCustomerAifFaultFault" name="AifFaultFault" message="tns:LinerPaymentsService_paymentToCustomer_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LinerPurchaseOrderService">
+    <wsdl:operation name="receiveItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPurchaseOrderService/receiveItems" name="LinerPurchaseOrderServiceReceiveItemsRequest" message="tns:LinerPurchaseOrderServiceReceiveItemsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPurchaseOrderService/receiveItemsResponse" name="LinerPurchaseOrderServiceReceiveItemsResponse" message="tns:LinerPurchaseOrderServiceReceiveItemsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPurchaseOrderService/receiveItemsAifFaultFault" name="AifFaultFault" message="tns:LinerPurchaseOrderService_receiveItems_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="devItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPurchaseOrderService/devItems" name="LinerPurchaseOrderServiceDevItemsRequest" message="tns:LinerPurchaseOrderServiceDevItemsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPurchaseOrderService/devItemsResponse" name="LinerPurchaseOrderServiceDevItemsResponse" message="tns:LinerPurchaseOrderServiceDevItemsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPurchaseOrderService/devItemsAifFaultFault" name="AifFaultFault" message="tns:LinerPurchaseOrderService_devItems_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPurchaseOrderItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerPurchaseOrderService/getPurchaseOrderItems" name="LinerPurchaseOrderServiceGetPurchaseOrderItemsRequest" message="tns:LinerPurchaseOrderServiceGetPurchaseOrderItemsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerPurchaseOrderService/getPurchaseOrderItemsResponse" name="LinerPurchaseOrderServiceGetPurchaseOrderItemsResponse" message="tns:LinerPurchaseOrderServiceGetPurchaseOrderItemsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerPurchaseOrderService/getPurchaseOrderItemsAifFaultFault" name="AifFaultFault" message="tns:LinerPurchaseOrderService_getPurchaseOrderItems_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LinerVendorService">
+    <wsdl:operation name="getVendorTermsOfPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerVendorService/getVendorTermsOfPayment" name="LinerVendorServiceGetVendorTermsOfPaymentRequest" message="tns:LinerVendorServiceGetVendorTermsOfPaymentRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerVendorService/getVendorTermsOfPaymentResponse" name="LinerVendorServiceGetVendorTermsOfPaymentResponse" message="tns:LinerVendorServiceGetVendorTermsOfPaymentResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerVendorService/getVendorTermsOfPaymentAifFaultFault" name="AifFaultFault" message="tns:LinerVendorService_getVendorTermsOfPayment_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="confirmSyncNewVendors">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerVendorService/confirmSyncNewVendors" name="LinerVendorServiceConfirmSyncNewVendorsRequest" message="tns:LinerVendorServiceConfirmSyncNewVendorsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerVendorService/confirmSyncNewVendorsResponse" name="LinerVendorServiceConfirmSyncNewVendorsResponse" message="tns:LinerVendorServiceConfirmSyncNewVendorsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerVendorService/confirmSyncNewVendorsAifFaultFault" name="AifFaultFault" message="tns:LinerVendorService_confirmSyncNewVendors_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getVendorsByType">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerVendorService/getVendorsByType" name="LinerVendorServiceGetVendorsByTypeRequest" message="tns:LinerVendorServiceGetVendorsByTypeRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerVendorService/getVendorsByTypeResponse" name="LinerVendorServiceGetVendorsByTypeResponse" message="tns:LinerVendorServiceGetVendorsByTypeResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerVendorService/getVendorsByTypeAifFaultFault" name="AifFaultFault" message="tns:LinerVendorService_getVendorsByType_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFiltredVendors">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerVendorService/getFiltredVendors" name="LinerVendorServiceGetFiltredVendorsRequest" message="tns:LinerVendorServiceGetFiltredVendorsRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerVendorService/getFiltredVendorsResponse" name="LinerVendorServiceGetFiltredVendorsResponse" message="tns:LinerVendorServiceGetFiltredVendorsResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerVendorService/getFiltredVendorsAifFaultFault" name="AifFaultFault" message="tns:LinerVendorService_getFiltredVendors_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getVendorsByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerVendorService/getVendorsByName" name="LinerVendorServiceGetVendorsByNameRequest" message="tns:LinerVendorServiceGetVendorsByNameRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerVendorService/getVendorsByNameResponse" name="LinerVendorServiceGetVendorsByNameResponse" message="tns:LinerVendorServiceGetVendorsByNameResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerVendorService/getVendorsByNameAifFaultFault" name="AifFaultFault" message="tns:LinerVendorService_getVendorsByName_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUpdateVendorsInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerVendorService/getUpdateVendorsInfo" name="LinerVendorServiceGetUpdateVendorsInfoRequest" message="tns:LinerVendorServiceGetUpdateVendorsInfoRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerVendorService/getUpdateVendorsInfoResponse" name="LinerVendorServiceGetUpdateVendorsInfoResponse" message="tns:LinerVendorServiceGetUpdateVendorsInfoResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerVendorService/getUpdateVendorsInfoAifFaultFault" name="AifFaultFault" message="tns:LinerVendorService_getUpdateVendorsInfo_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNewVendorsInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerVendorService/getNewVendorsInfo" name="LinerVendorServiceGetNewVendorsInfoRequest" message="tns:LinerVendorServiceGetNewVendorsInfoRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerVendorService/getNewVendorsInfoResponse" name="LinerVendorServiceGetNewVendorsInfoResponse" message="tns:LinerVendorServiceGetNewVendorsInfoResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerVendorService/getNewVendorsInfoAifFaultFault" name="AifFaultFault" message="tns:LinerVendorService_getNewVendorsInfo_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getVendorInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerVendorService/getVendorInfo" name="LinerVendorServiceGetVendorInfoRequest" message="tns:LinerVendorServiceGetVendorInfoRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerVendorService/getVendorInfoResponse" name="LinerVendorServiceGetVendorInfoResponse" message="tns:LinerVendorServiceGetVendorInfoResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerVendorService/getVendorInfoAifFaultFault" name="AifFaultFault" message="tns:LinerVendorService_getVendorInfo_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getVendorsCompleteInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/LinerVendorService/getVendorsCompleteInfo" name="LinerVendorServiceGetVendorsCompleteInfoRequest" message="tns:LinerVendorServiceGetVendorsCompleteInfoRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LinerVendorService/getVendorsCompleteInfoResponse" name="LinerVendorServiceGetVendorsCompleteInfoResponse" message="tns:LinerVendorServiceGetVendorsCompleteInfoResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LinerVendorService/getVendorsCompleteInfoAifFaultFault" name="AifFaultFault" message="tns:LinerVendorService_getVendorsCompleteInfo_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

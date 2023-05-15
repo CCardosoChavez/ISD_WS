@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5120ee5a-f084-4fe2-a745-f0161e80bc88" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LinerServices.xsd" MetadataType="Schema" ID="721838b7-29f7-4b07-9dd4-578146fb8a52" SourceId="1" SourceUrl="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd6" />
+    <MetadataFile FileName="LinerServices1.xsd" MetadataType="Schema" ID="c0876f42-fba3-4c1b-ae6a-fb617f8321aa" SourceId="1" SourceUrl="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd7" />
+    <MetadataFile FileName="LinerServices2.xsd" MetadataType="Schema" ID="5a9b850e-3028-48ae-b40a-4920382e9e8b" SourceId="1" SourceUrl="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd5" />
+    <MetadataFile FileName="LinerServices.wsdl" MetadataType="Wsdl" ID="044fbfb9-95db-49ad-8c41-66f2f4b9067d" SourceId="1" SourceUrl="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices" />
+    <MetadataFile FileName="LinerServices3.xsd" MetadataType="Schema" ID="3e3e3149-d793-44a8-aa54-43efcf5c69d4" SourceId="1" SourceUrl="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd3" />
+    <MetadataFile FileName="LinerServices1.wsdl" MetadataType="Wsdl" ID="f41c8a05-8626-4817-80e3-97f51999efc4" SourceId="1" SourceUrl="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?wsdl=wsdl0" />
+    <MetadataFile FileName="LinerServices4.xsd" MetadataType="Schema" ID="88d99059-0036-42bc-add4-16e7d112d2f3" SourceId="1" SourceUrl="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd1" />
+    <MetadataFile FileName="LinerServices5.xsd" MetadataType="Schema" ID="34f3a359-de73-44f1-b340-e626e69ad7c5" SourceId="1" SourceUrl="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd4" />
+    <MetadataFile FileName="LinerServices6.xsd" MetadataType="Schema" ID="849624a9-7496-4244-8753-bef8f38d086e" SourceId="1" SourceUrl="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd0" />
+    <MetadataFile FileName="LinerServices7.xsd" MetadataType="Schema" ID="ee74565e-2d46-4b02-bb50-2940c5e7ef55" SourceId="1" SourceUrl="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

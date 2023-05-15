@@ -1,0 +1,1467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org" elementFormDefault="qualified" targetNamespace="http://tempuri.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" />
+  <xs:import schemaLocation="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="LinerBankTransServiceReversePaymentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_recIdTran" type="xs:long" />
+        <xs:element minOccurs="0" name="_recIdAccount" type="xs:long" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_lineId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceReversePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceRememberPaymentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_recId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceRememberPaymentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceRetriveForgotenBankTransInfoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_bankAccountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_from" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_to" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_currency" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceRetriveForgotenBankTransInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q1:ArrayOfzLinerPendingBankRecordContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceTransferToDepositRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tranRecId" type="xs:long" />
+        <xs:element minOccurs="0" name="amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="lineId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceTransferToDepositResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceForgetPaymentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_recId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceForgetPaymentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceRetrivePendingBankTransInfoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_bankAccountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_from" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_to" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_bandera" type="xs:boolean" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="_zLinerPendingBankList" nillable="true" type="q2:ArrayOfzLinerPendingBankRecordContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceRetrivePendingBankTransInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q3:ArrayOfzLinerPendingBankRecordContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceTransferPaymentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_recIdTran" type="xs:long" />
+        <xs:element minOccurs="0" name="_recIdAccountOld" type="xs:long" />
+        <xs:element minOccurs="0" name="_recIdAccountNew" type="xs:long" />
+        <xs:element minOccurs="0" name="_serviceOrderOld" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_serviceOrderNew" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_lineId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceTransferPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceApplyPaymentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_recIdTran" type="xs:long" />
+        <xs:element minOccurs="0" name="_recIdAccount" type="xs:long" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_lineId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceApplyPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceRetriveTotalPendingRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_bankAccountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_from" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_to" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_currency" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceRetriveTotalPendingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceGetBankAccountsRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceGetBankAccountsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="response" nillable="true" type="q4:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceRetriveStateOfAccountRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_bankAccountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_from" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_to" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceRetriveStateOfAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q5:ArrayOfzLinerPendingBankRecordContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceAddBankTranRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="_records" nillable="true" type="q6:ArrayOfzLinerPendingBankRecordContract" />
+        <xs:element minOccurs="0" name="_bankAccount" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceAddBankTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q7:ArrayOfzLinerPendingBankRecordContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceRetriveTransInfoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_recId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerBankTransServiceRetriveTransInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q8:zLinerPendingBankRecordContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCurrenciesServiceRegisterProfitOrLossRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_customerID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCurrenciesServiceRegisterProfitOrLossResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCurrenciesServiceGetExchangeRateRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCurrenciesServiceGetExchangeRateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCurrenciesServiceGetCurExchRatePerCompanyRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_Currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_dataArea" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_lineId" type="xs:int" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="typeRefPaym" type="q9:RPM_OpTypeRefPaym" />
+        <xs:element minOccurs="0" name="_transDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCurrenciesServiceGetCurExchRatePerCompanyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCurrenciesServiceRegisterAdjustmentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_customerID" type="xs:long" />
+        <xs:element minOccurs="0" name="_currencyID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCurrenciesServiceRegisterAdjustmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCurrenciesServiceGetAverangeExchangeTypeRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCurrenciesServiceGetAverangeExchangeTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCurrenciesServiceGetBuyExchangeTypeRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCurrenciesServiceGetBuyExchangeTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCustomerServiceConfirmSyncNewCustomersRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="confirmCustomers" nillable="true" type="q10:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCustomerServiceConfirmSyncNewCustomersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCustomerServiceGetFilteredCustomersLinerRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_customerName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCustomerServiceGetFilteredCustomersLinerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q11:ArrayOfzCustomerInfoContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCustomerServiceGetFilteredCustomersRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_customerType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_customerName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCustomerServiceGetFilteredCustomersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q12:ArrayOfzCustomerInfoContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCustomerServiceGetNewCustomersInfoRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCustomerServiceGetNewCustomersInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q13:ArrayOfzCustomerInfoContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCustomerServiceGetAllCustomersRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCustomerServiceGetAllCustomersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q14:ArrayOfzCustomerInfoContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCustomerServiceGetCustomerInfoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_recId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCustomerServiceGetCustomerInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q15:zCustomerInfoContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCustomerServiceGetCustomersByTypeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_customerType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerCustomerServiceGetCustomersByTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q16:ArrayOfzCustomerContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerEmployeeServiceGetSalesEmployeesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_Line" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerEmployeeServiceGetSalesEmployeesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q17:ArrayOfzSalesEmployeeContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerFreightChargesAndDelaysServiceReturnFreightChargesAndDelaysRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_bankAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_lineId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerFreightChargesAndDelaysServiceReturnFreightChargesAndDelaysResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerFreightChargesAndDelaysServiceApplyPaymentToLineChargesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_recIdTran" type="xs:long" />
+        <xs:element minOccurs="0" name="_recIdAccount" type="xs:long" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_lineId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerFreightChargesAndDelaysServiceApplyPaymentToLineChargesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerFreightChargesAndDelaysServiceReturnDepositRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_bankAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_lineId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerFreightChargesAndDelaysServiceReturnDepositResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerFreightChargesAndDelaysServiceReturnFreightsChargesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_customerId" type="xs:long" />
+        <xs:element minOccurs="0" name="_bankAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_dueDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerFreightChargesAndDelaysServiceReturnFreightsChargesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerGuaranteeDepositServiceApplyGuaranteeDepositByDocumentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_BLNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerGuaranteeDepositServiceApplyGuaranteeDepositByDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerGuaranteeDepositServiceApplyGuaranteeDepositByTransferRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_recIdTran" type="xs:long" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_BLNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerGuaranteeDepositServiceApplyGuaranteeDepositByTransferResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerGuaranteeDepositServiceReturnGuaranteeDepositRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_recIdAccount" type="xs:long" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_BLNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_bankAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_bankName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_CLABE" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerGuaranteeDepositServiceReturnGuaranteeDepositResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerGuaranteeDepositServiceReturnGuaranteeDepositByDocumentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_BLNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerGuaranteeDepositServiceReturnGuaranteeDepositByDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceFeeLineInvoiceRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_customerID" type="xs:long" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceFeeLineInvoiceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServicePr_GenerateGuaranteeDepositRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_customerID" type="xs:long" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_lineId" type="xs:int" />
+        <xs:element minOccurs="0" name="_TransId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServicePr_GenerateGuaranteeDepositResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceCollectInvoiceRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_bankAccountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_invoiceNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_customerID" type="xs:long" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_lineId" type="xs:int" />
+        <xs:element minOccurs="0" name="_TranId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceCollectInvoiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceGetInvoiceNumberRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_salesId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceGetInvoiceNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServicePr_ReturnRequestRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_customerId" type="xs:long" />
+        <xs:element minOccurs="0" name="_lineId" type="xs:int" />
+        <xs:element minOccurs="0" name="_voucher" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServicePr_ReturnRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceFeeLineCollectRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_customerID" type="xs:long" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_bankAccount" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceFeeLineCollectResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceSettleInvoiceWithCreditNoteRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_invoiceSalesId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_CreditNoteSalesId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceSettleInvoiceWithCreditNoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceCancelInvoiceRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_invoiceId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_cveCancelacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_uuidSustitucion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceCancelInvoiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceNewInvoiceWithItemsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_customer" type="xs:long" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="_items" nillable="true" type="q18:ArrayOfzInvoiceItemContract" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="_type" type="q19:zInvoiceType" />
+        <xs:element minOccurs="0" name="_text" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_accountNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_vessel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_port" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_voyage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_ETA" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_invoiceDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_booking" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_bankTranId" type="xs:long" />
+        <xs:element minOccurs="0" name="_lineId" type="xs:int" />
+        <xs:element minOccurs="0" name="_thirdParty" type="xs:boolean" />
+        <xs:element minOccurs="0" name="_referencia" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceNewInvoiceWithItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServicePr_GenerateDepositISDRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_customerID" type="xs:long" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_lineId" type="xs:int" />
+        <xs:element minOccurs="0" name="_TransId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServicePr_GenerateDepositISDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServicePr_RecognizeCreditBalanceRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_customerID" type="xs:long" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_lineId" type="xs:int" />
+        <xs:element minOccurs="0" name="_TransId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServicePr_RecognizeCreditBalanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServicePr_CollectInvoiceRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_bankAccountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_invoiceNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_customerID" type="xs:long" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_lineId" type="xs:int" />
+        <xs:element minOccurs="0" name="_TranId" type="xs:long" />
+        <xs:element minOccurs="0" name="_invoicePaymentId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServicePr_CollectInvoiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceNewCreditNoteFromSaleOrderRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_invoiceSalesId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceNewCreditNoteFromSaleOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceNewCreditNoteWithItemsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_invoiceSalesId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_customer" type="xs:long" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="_items" nillable="true" type="q20:ArrayOfzInvoiceItemContract" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="_type" type="q21:zInvoiceType" />
+        <xs:element minOccurs="0" name="_text" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_accountNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_vessel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_port" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_voyage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_ETA" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_invoiceDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_booking" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_lineId" type="xs:int" />
+        <xs:element minOccurs="0" name="_referencia" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceNewCreditNoteWithItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceNewCreditNoteRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_invoiceSalesId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_itemId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_line" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceNewCreditNoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceNewInvoiceRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customer" type="xs:long" />
+        <xs:element minOccurs="0" name="itemId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" type="xs:decimal" />
+        <xs:element minOccurs="0" name="unitPrice" type="xs:decimal" />
+        <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="haveTax" type="xs:boolean" />
+        <xs:element minOccurs="0" name="vessel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="voyage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="port" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ETA" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ServiceOrderExchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="originalItemId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_bankTranId" type="xs:long" />
+        <xs:element minOccurs="0" name="_lineId" type="xs:int" />
+        <xs:element minOccurs="0" name="_thirdParty" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceNewInvoiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceGetInvoiceXMLRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_invoiceId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServiceGetInvoiceXMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServicePr_NewInvoiceWithItemsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_customer" type="xs:long" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="_items" nillable="true" type="q22:ArrayOfzInvoiceItemContract" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="_type" type="q23:zInvoiceType" />
+        <xs:element minOccurs="0" name="_text" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_accountNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_vessel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_port" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_voyage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_ETA" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_invoiceDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_booking" nillable="true" type="xs:string" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="_linerRemesaContract" nillable="true" type="q24:ArrayOfRPM_LinerRemesaContract" />
+        <xs:element minOccurs="0" name="_lineId" type="xs:int" />
+        <xs:element minOccurs="0" name="_thirdParty" type="xs:boolean" />
+        <xs:element minOccurs="0" name="_blNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_itineraryId" type="xs:int" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="_invoiceType" type="q25:RPM_InvoiceType" />
+        <xs:element minOccurs="0" name="_SATUsoCfdiId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerInvoicesServicePr_NewInvoiceWithItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceNewInvoiceByItemsMexTerraRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="_items" nillable="true" type="q26:ArrayOfzVendorInvoiceItemContract" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_invoiceDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_invoice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_vendorId" type="xs:long" />
+        <xs:element minOccurs="0" name="_customerId" type="xs:long" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_approverId" type="xs:long" />
+        <xs:element minOccurs="0" name="_CostCenter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_UUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceNewInvoiceByItemsMexTerraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceNewInvoicePaymentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_invoiceVoucher" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_paymentDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_vendorId" type="xs:long" />
+        <xs:element minOccurs="0" name="_bankAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_customerId" type="xs:long" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_approverId" type="xs:long" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_journalName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceNewInvoicePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServicePaymentToCustomerRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_customerId" type="xs:long" />
+        <xs:element minOccurs="0" name="_bankAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_dueDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServicePaymentToCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServicePr_PaymentToCustomerRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_customerId" type="xs:long" />
+        <xs:element minOccurs="0" name="_bankAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_dueDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_voucherDev" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_LineId" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServicePr_PaymentToCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServicePr_ReturnDepositISDRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_customerId" type="xs:long" />
+        <xs:element minOccurs="0" name="_bankAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_dueDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_voucherDev" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_LineId" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServicePr_ReturnDepositISDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceNewInvoiceByItemsAdvancePaymentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="_items" nillable="true" type="q27:ArrayOfzVendorInvoiceItemContract" />
+        <xs:element xmlns:q28="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="recId" nillable="true" type="q28:ArrayOflong" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_invoiceDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_invoice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_vendorId" type="xs:long" />
+        <xs:element minOccurs="0" name="_customerId" type="xs:long" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_approverId" type="xs:long" />
+        <xs:element minOccurs="0" name="_CostCenter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_UUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceNewInvoiceByItemsAdvancePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceCancelPaymentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_clientId" type="xs:long" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceCancelPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServicePr_ReturnGuaranteeDepositRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_customerId" type="xs:long" />
+        <xs:element minOccurs="0" name="_bankAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_dueDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_voucherDev" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_LineId" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServicePr_ReturnGuaranteeDepositResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceNewInvoiceAdvancePaymentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="recId" nillable="true" type="q29:ArrayOflong" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_invoiceDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_invoice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_vendorId" type="xs:long" />
+        <xs:element minOccurs="0" name="_customerId" type="xs:long" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_approverId" type="xs:long" />
+        <xs:element minOccurs="0" name="_UUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceNewInvoiceAdvancePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceConfirmNewPaymentsRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceConfirmNewPaymentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceGetNewPaymentsRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceGetNewPaymentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q30:ArrayOfzNewPaymentsSummaryContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceReserveRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_customerID" type="xs:long" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_USDDeposit" type="xs:boolean" />
+        <xs:element minOccurs="0" name="lineId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceReserveResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceNewInvoiceByItemsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="_items" nillable="true" type="q31:ArrayOfzVendorInvoiceItemContract" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_invoiceDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_invoice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_vendorId" type="xs:long" />
+        <xs:element minOccurs="0" name="_customerId" type="xs:long" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_approverId" type="xs:long" />
+        <xs:element minOccurs="0" name="_CostCenter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_UUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceNewInvoiceByItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceReturnToCustomerRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_customerId" type="xs:long" />
+        <xs:element minOccurs="0" name="_bankAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_BLNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_dueDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_CLABE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_BankName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_line" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceReturnToCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceAdvancePaymentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_paymentDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_vendorId" type="xs:long" />
+        <xs:element minOccurs="0" name="_bankAccount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_customerId" type="xs:long" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_approverId" type="xs:long" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_USDDeposit" type="xs:boolean" />
+        <xs:element minOccurs="0" name="lineId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceAdvancePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceTransferRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_serviceOrderOld" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_serviceOrderNew" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_customerID" type="xs:long" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_exchangeRateNew" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_USDDeposit" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceTransferResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceNewInvoiceRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_invoiceDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="_currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_invoice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_vendorId" type="xs:long" />
+        <xs:element minOccurs="0" name="_customerId" type="xs:long" />
+        <xs:element minOccurs="0" name="_serviceOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_approverId" type="xs:long" />
+        <xs:element minOccurs="0" name="_UUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_exchangeRate" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPaymentsServiceNewInvoiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPurchaseOrderServiceReceiveItemsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_purchId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="_items" nillable="true" type="q32:ArrayOfzPurchaseOrderItemsContract" />
+        <xs:element minOccurs="0" name="_receipt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPurchaseOrderServiceReceiveItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPurchaseOrderServiceGetPurchaseOrderItemsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_vendAccount" type="xs:long" />
+        <xs:element minOccurs="0" name="_purchaseOrder" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPurchaseOrderServiceGetPurchaseOrderItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q33:ArrayOfzPurchaseOrderItemsContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPurchaseOrderServiceDevItemsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_vendAccount" nillable="true" type="xs:string" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="_items" nillable="true" type="q34:ArrayOfzPurchaseOrderItemsContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerPurchaseOrderServiceDevItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerVendorServiceGetVendorsByNameRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_vendorName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerVendorServiceGetVendorsByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q35:ArrayOfzVendorContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerVendorServiceGetVendorsCompleteInfoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_recId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerVendorServiceGetVendorsCompleteInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q36:zVendorInfoContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerVendorServiceConfirmSyncNewVendorsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="confirmVendor" nillable="true" type="q37:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerVendorServiceConfirmSyncNewVendorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerVendorServiceGetFiltredVendorsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_vendorType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_vendorName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerVendorServiceGetFiltredVendorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q38:ArrayOfzVendorContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerVendorServiceGetNewVendorsInfoRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerVendorServiceGetNewVendorsInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q39:ArrayOfzVendorInfoContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerVendorServiceGetUpdateVendorsInfoRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerVendorServiceGetUpdateVendorsInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q40:ArrayOfzVendorInfoContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerVendorServiceGetVendorsByTypeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_vendorType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerVendorServiceGetVendorsByTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q41:ArrayOfzVendorContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerVendorServiceGetVendorInfoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_recId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerVendorServiceGetVendorInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q42:zVendorContactContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerVendorServiceGetVendorTermsOfPaymentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_vendorId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinerVendorServiceGetVendorTermsOfPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" minOccurs="0" name="response" nillable="true" type="q43:zTermOfPaymentContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

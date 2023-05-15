@@ -1,0 +1,1493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LinerServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_LinerBankTransService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetTcpBinding_LinerCurrenciesService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetTcpBinding_LinerCustomerService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetTcpBinding_LinerEmployeeService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetTcpBinding_LinerFreightChargesAndDelaysService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetTcpBinding_LinerGuaranteeDepositService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetTcpBinding_LinerInvoicesService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetTcpBinding_LinerPaymentsService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetTcpBinding_LinerPurchaseOrderService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetTcpBinding_LinerVendorService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://tempuri.org" location="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="NetTcpBinding_LinerBankTransService" type="i0:LinerBankTransService">
+    <wsp:PolicyReference URI="#NetTcpBinding_LinerBankTransService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="reversePayment">
+      <soap12:operation soapAction="http://tempuri.org/LinerBankTransService/reversePayment" style="document" />
+      <wsdl:input name="LinerBankTransServiceReversePaymentRequest">
+        <soap12:header message="i0:LinerBankTransServiceReversePaymentRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerBankTransServiceReversePaymentResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="rememberPayment">
+      <soap12:operation soapAction="http://tempuri.org/LinerBankTransService/rememberPayment" style="document" />
+      <wsdl:input name="LinerBankTransServiceRememberPaymentRequest">
+        <soap12:header message="i0:LinerBankTransServiceRememberPaymentRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerBankTransServiceRememberPaymentResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="retriveForgotenBankTransInfo">
+      <soap12:operation soapAction="http://tempuri.org/LinerBankTransService/retriveForgotenBankTransInfo" style="document" />
+      <wsdl:input name="LinerBankTransServiceRetriveForgotenBankTransInfoRequest">
+        <soap12:header message="i0:LinerBankTransServiceRetriveForgotenBankTransInfoRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerBankTransServiceRetriveForgotenBankTransInfoResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="transferToDeposit">
+      <soap12:operation soapAction="http://tempuri.org/LinerBankTransService/transferToDeposit" style="document" />
+      <wsdl:input name="LinerBankTransServiceTransferToDepositRequest">
+        <soap12:header message="i0:LinerBankTransServiceTransferToDepositRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerBankTransServiceTransferToDepositResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="forgetPayment">
+      <soap12:operation soapAction="http://tempuri.org/LinerBankTransService/forgetPayment" style="document" />
+      <wsdl:input name="LinerBankTransServiceForgetPaymentRequest">
+        <soap12:header message="i0:LinerBankTransServiceForgetPaymentRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerBankTransServiceForgetPaymentResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="retrivePendingBankTransInfo">
+      <soap12:operation soapAction="http://tempuri.org/LinerBankTransService/retrivePendingBankTransInfo" style="document" />
+      <wsdl:input name="LinerBankTransServiceRetrivePendingBankTransInfoRequest">
+        <soap12:header message="i0:LinerBankTransServiceRetrivePendingBankTransInfoRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerBankTransServiceRetrivePendingBankTransInfoResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="transferPayment">
+      <soap12:operation soapAction="http://tempuri.org/LinerBankTransService/transferPayment" style="document" />
+      <wsdl:input name="LinerBankTransServiceTransferPaymentRequest">
+        <soap12:header message="i0:LinerBankTransServiceTransferPaymentRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerBankTransServiceTransferPaymentResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="applyPayment">
+      <soap12:operation soapAction="http://tempuri.org/LinerBankTransService/applyPayment" style="document" />
+      <wsdl:input name="LinerBankTransServiceApplyPaymentRequest">
+        <soap12:header message="i0:LinerBankTransServiceApplyPaymentRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerBankTransServiceApplyPaymentResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="retriveTotalPending">
+      <soap12:operation soapAction="http://tempuri.org/LinerBankTransService/retriveTotalPending" style="document" />
+      <wsdl:input name="LinerBankTransServiceRetriveTotalPendingRequest">
+        <soap12:header message="i0:LinerBankTransServiceRetriveTotalPendingRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerBankTransServiceRetriveTotalPendingResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getBankAccounts">
+      <soap12:operation soapAction="http://tempuri.org/LinerBankTransService/getBankAccounts" style="document" />
+      <wsdl:input name="LinerBankTransServiceGetBankAccountsRequest">
+        <soap12:header message="i0:LinerBankTransServiceGetBankAccountsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerBankTransServiceGetBankAccountsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="retriveStateOfAccount">
+      <soap12:operation soapAction="http://tempuri.org/LinerBankTransService/retriveStateOfAccount" style="document" />
+      <wsdl:input name="LinerBankTransServiceRetriveStateOfAccountRequest">
+        <soap12:header message="i0:LinerBankTransServiceRetriveStateOfAccountRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerBankTransServiceRetriveStateOfAccountResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addBankTran">
+      <soap12:operation soapAction="http://tempuri.org/LinerBankTransService/addBankTran" style="document" />
+      <wsdl:input name="LinerBankTransServiceAddBankTranRequest">
+        <soap12:header message="i0:LinerBankTransServiceAddBankTranRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerBankTransServiceAddBankTranResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="retriveTransInfo">
+      <soap12:operation soapAction="http://tempuri.org/LinerBankTransService/retriveTransInfo" style="document" />
+      <wsdl:input name="LinerBankTransServiceRetriveTransInfoRequest">
+        <soap12:header message="i0:LinerBankTransServiceRetriveTransInfoRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerBankTransServiceRetriveTransInfoResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_LinerCurrenciesService" type="i0:LinerCurrenciesService">
+    <wsp:PolicyReference URI="#NetTcpBinding_LinerCurrenciesService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="registerProfitOrLoss">
+      <soap12:operation soapAction="http://tempuri.org/LinerCurrenciesService/registerProfitOrLoss" style="document" />
+      <wsdl:input name="LinerCurrenciesServiceRegisterProfitOrLossRequest">
+        <soap12:header message="i0:LinerCurrenciesServiceRegisterProfitOrLossRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerCurrenciesServiceRegisterProfitOrLossResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getExchangeRate">
+      <soap12:operation soapAction="http://tempuri.org/LinerCurrenciesService/getExchangeRate" style="document" />
+      <wsdl:input name="LinerCurrenciesServiceGetExchangeRateRequest">
+        <soap12:header message="i0:LinerCurrenciesServiceGetExchangeRateRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerCurrenciesServiceGetExchangeRateResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCurExchRatePerCompany">
+      <soap12:operation soapAction="http://tempuri.org/LinerCurrenciesService/getCurExchRatePerCompany" style="document" />
+      <wsdl:input name="LinerCurrenciesServiceGetCurExchRatePerCompanyRequest">
+        <soap12:header message="i0:LinerCurrenciesServiceGetCurExchRatePerCompanyRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerCurrenciesServiceGetCurExchRatePerCompanyResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="registerAdjustment">
+      <soap12:operation soapAction="http://tempuri.org/LinerCurrenciesService/registerAdjustment" style="document" />
+      <wsdl:input name="LinerCurrenciesServiceRegisterAdjustmentRequest">
+        <soap12:header message="i0:LinerCurrenciesServiceRegisterAdjustmentRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerCurrenciesServiceRegisterAdjustmentResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAverangeExchangeType">
+      <soap12:operation soapAction="http://tempuri.org/LinerCurrenciesService/getAverangeExchangeType" style="document" />
+      <wsdl:input name="LinerCurrenciesServiceGetAverangeExchangeTypeRequest">
+        <soap12:header message="i0:LinerCurrenciesServiceGetAverangeExchangeTypeRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerCurrenciesServiceGetAverangeExchangeTypeResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getBuyExchangeType">
+      <soap12:operation soapAction="http://tempuri.org/LinerCurrenciesService/getBuyExchangeType" style="document" />
+      <wsdl:input name="LinerCurrenciesServiceGetBuyExchangeTypeRequest">
+        <soap12:header message="i0:LinerCurrenciesServiceGetBuyExchangeTypeRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerCurrenciesServiceGetBuyExchangeTypeResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_LinerCustomerService" type="i0:LinerCustomerService">
+    <wsp:PolicyReference URI="#NetTcpBinding_LinerCustomerService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="confirmSyncNewCustomers">
+      <soap12:operation soapAction="http://tempuri.org/LinerCustomerService/confirmSyncNewCustomers" style="document" />
+      <wsdl:input name="LinerCustomerServiceConfirmSyncNewCustomersRequest">
+        <soap12:header message="i0:LinerCustomerServiceConfirmSyncNewCustomersRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerCustomerServiceConfirmSyncNewCustomersResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getFilteredCustomersLiner">
+      <soap12:operation soapAction="http://tempuri.org/LinerCustomerService/getFilteredCustomersLiner" style="document" />
+      <wsdl:input name="LinerCustomerServiceGetFilteredCustomersLinerRequest">
+        <soap12:header message="i0:LinerCustomerServiceGetFilteredCustomersLinerRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerCustomerServiceGetFilteredCustomersLinerResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getFilteredCustomers">
+      <soap12:operation soapAction="http://tempuri.org/LinerCustomerService/getFilteredCustomers" style="document" />
+      <wsdl:input name="LinerCustomerServiceGetFilteredCustomersRequest">
+        <soap12:header message="i0:LinerCustomerServiceGetFilteredCustomersRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerCustomerServiceGetFilteredCustomersResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getNewCustomersInfo">
+      <soap12:operation soapAction="http://tempuri.org/LinerCustomerService/getNewCustomersInfo" style="document" />
+      <wsdl:input name="LinerCustomerServiceGetNewCustomersInfoRequest">
+        <soap12:header message="i0:LinerCustomerServiceGetNewCustomersInfoRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerCustomerServiceGetNewCustomersInfoResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAllCustomers">
+      <soap12:operation soapAction="http://tempuri.org/LinerCustomerService/getAllCustomers" style="document" />
+      <wsdl:input name="LinerCustomerServiceGetAllCustomersRequest">
+        <soap12:header message="i0:LinerCustomerServiceGetAllCustomersRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerCustomerServiceGetAllCustomersResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerInfo">
+      <soap12:operation soapAction="http://tempuri.org/LinerCustomerService/getCustomerInfo" style="document" />
+      <wsdl:input name="LinerCustomerServiceGetCustomerInfoRequest">
+        <soap12:header message="i0:LinerCustomerServiceGetCustomerInfoRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerCustomerServiceGetCustomerInfoResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomersByType">
+      <soap12:operation soapAction="http://tempuri.org/LinerCustomerService/getCustomersByType" style="document" />
+      <wsdl:input name="LinerCustomerServiceGetCustomersByTypeRequest">
+        <soap12:header message="i0:LinerCustomerServiceGetCustomersByTypeRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerCustomerServiceGetCustomersByTypeResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_LinerEmployeeService" type="i0:LinerEmployeeService">
+    <wsp:PolicyReference URI="#NetTcpBinding_LinerEmployeeService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="getSalesEmployees">
+      <soap12:operation soapAction="http://tempuri.org/LinerEmployeeService/getSalesEmployees" style="document" />
+      <wsdl:input name="LinerEmployeeServiceGetSalesEmployeesRequest">
+        <soap12:header message="i0:LinerEmployeeServiceGetSalesEmployeesRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerEmployeeServiceGetSalesEmployeesResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_LinerFreightChargesAndDelaysService" type="i0:LinerFreightChargesAndDelaysService">
+    <wsp:PolicyReference URI="#NetTcpBinding_LinerFreightChargesAndDelaysService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="ReturnFreightChargesAndDelays">
+      <soap12:operation soapAction="http://tempuri.org/LinerFreightChargesAndDelaysService/ReturnFreightChargesAndDelays" style="document" />
+      <wsdl:input name="LinerFreightChargesAndDelaysServiceReturnFreightChargesAndDelaysRequest">
+        <soap12:header message="i0:LinerFreightChargesAndDelaysServiceReturnFreightChargesAndDelaysRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerFreightChargesAndDelaysServiceReturnFreightChargesAndDelaysResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="applyPaymentToLineCharges">
+      <soap12:operation soapAction="http://tempuri.org/LinerFreightChargesAndDelaysService/applyPaymentToLineCharges" style="document" />
+      <wsdl:input name="LinerFreightChargesAndDelaysServiceApplyPaymentToLineChargesRequest">
+        <soap12:header message="i0:LinerFreightChargesAndDelaysServiceApplyPaymentToLineChargesRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerFreightChargesAndDelaysServiceApplyPaymentToLineChargesResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnDeposit">
+      <soap12:operation soapAction="http://tempuri.org/LinerFreightChargesAndDelaysService/ReturnDeposit" style="document" />
+      <wsdl:input name="LinerFreightChargesAndDelaysServiceReturnDepositRequest">
+        <soap12:header message="i0:LinerFreightChargesAndDelaysServiceReturnDepositRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerFreightChargesAndDelaysServiceReturnDepositResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="returnFreightsCharges">
+      <soap12:operation soapAction="http://tempuri.org/LinerFreightChargesAndDelaysService/returnFreightsCharges" style="document" />
+      <wsdl:input name="LinerFreightChargesAndDelaysServiceReturnFreightsChargesRequest">
+        <soap12:header message="i0:LinerFreightChargesAndDelaysServiceReturnFreightsChargesRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerFreightChargesAndDelaysServiceReturnFreightsChargesResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_LinerGuaranteeDepositService" type="i0:LinerGuaranteeDepositService">
+    <wsp:PolicyReference URI="#NetTcpBinding_LinerGuaranteeDepositService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="applyGuaranteeDepositByDocument">
+      <soap12:operation soapAction="http://tempuri.org/LinerGuaranteeDepositService/applyGuaranteeDepositByDocument" style="document" />
+      <wsdl:input name="LinerGuaranteeDepositServiceApplyGuaranteeDepositByDocumentRequest">
+        <soap12:header message="i0:LinerGuaranteeDepositServiceApplyGuaranteeDepositByDocumentRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerGuaranteeDepositServiceApplyGuaranteeDepositByDocumentResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="applyGuaranteeDepositByTransfer">
+      <soap12:operation soapAction="http://tempuri.org/LinerGuaranteeDepositService/applyGuaranteeDepositByTransfer" style="document" />
+      <wsdl:input name="LinerGuaranteeDepositServiceApplyGuaranteeDepositByTransferRequest">
+        <soap12:header message="i0:LinerGuaranteeDepositServiceApplyGuaranteeDepositByTransferRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerGuaranteeDepositServiceApplyGuaranteeDepositByTransferResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="returnGuaranteeDeposit">
+      <soap12:operation soapAction="http://tempuri.org/LinerGuaranteeDepositService/returnGuaranteeDeposit" style="document" />
+      <wsdl:input name="LinerGuaranteeDepositServiceReturnGuaranteeDepositRequest">
+        <soap12:header message="i0:LinerGuaranteeDepositServiceReturnGuaranteeDepositRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerGuaranteeDepositServiceReturnGuaranteeDepositResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="returnGuaranteeDepositByDocument">
+      <soap12:operation soapAction="http://tempuri.org/LinerGuaranteeDepositService/returnGuaranteeDepositByDocument" style="document" />
+      <wsdl:input name="LinerGuaranteeDepositServiceReturnGuaranteeDepositByDocumentRequest">
+        <soap12:header message="i0:LinerGuaranteeDepositServiceReturnGuaranteeDepositByDocumentRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerGuaranteeDepositServiceReturnGuaranteeDepositByDocumentResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_LinerInvoicesService" type="i0:LinerInvoicesService">
+    <wsp:PolicyReference URI="#NetTcpBinding_LinerInvoicesService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="FeeLineInvoice">
+      <soap12:operation soapAction="http://tempuri.org/LinerInvoicesService/FeeLineInvoice" style="document" />
+      <wsdl:input name="LinerInvoicesServiceFeeLineInvoiceRequest">
+        <soap12:header message="i0:LinerInvoicesServiceFeeLineInvoiceRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerInvoicesServiceFeeLineInvoiceResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="pr_GenerateGuaranteeDeposit">
+      <soap12:operation soapAction="http://tempuri.org/LinerInvoicesService/pr_GenerateGuaranteeDeposit" style="document" />
+      <wsdl:input name="LinerInvoicesServicePr_GenerateGuaranteeDepositRequest">
+        <soap12:header message="i0:LinerInvoicesServicePr_GenerateGuaranteeDepositRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerInvoicesServicePr_GenerateGuaranteeDepositResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="collectInvoice">
+      <soap12:operation soapAction="http://tempuri.org/LinerInvoicesService/collectInvoice" style="document" />
+      <wsdl:input name="LinerInvoicesServiceCollectInvoiceRequest">
+        <soap12:header message="i0:LinerInvoicesServiceCollectInvoiceRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerInvoicesServiceCollectInvoiceResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getInvoiceNumber">
+      <soap12:operation soapAction="http://tempuri.org/LinerInvoicesService/getInvoiceNumber" style="document" />
+      <wsdl:input name="LinerInvoicesServiceGetInvoiceNumberRequest">
+        <soap12:header message="i0:LinerInvoicesServiceGetInvoiceNumberRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerInvoicesServiceGetInvoiceNumberResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="pr_ReturnRequest">
+      <soap12:operation soapAction="http://tempuri.org/LinerInvoicesService/pr_ReturnRequest" style="document" />
+      <wsdl:input name="LinerInvoicesServicePr_ReturnRequestRequest">
+        <soap12:header message="i0:LinerInvoicesServicePr_ReturnRequestRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerInvoicesServicePr_ReturnRequestResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FeeLineCollect">
+      <soap12:operation soapAction="http://tempuri.org/LinerInvoicesService/FeeLineCollect" style="document" />
+      <wsdl:input name="LinerInvoicesServiceFeeLineCollectRequest">
+        <soap12:header message="i0:LinerInvoicesServiceFeeLineCollectRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerInvoicesServiceFeeLineCollectResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="settleInvoiceWithCreditNote">
+      <soap12:operation soapAction="http://tempuri.org/LinerInvoicesService/settleInvoiceWithCreditNote" style="document" />
+      <wsdl:input name="LinerInvoicesServiceSettleInvoiceWithCreditNoteRequest">
+        <soap12:header message="i0:LinerInvoicesServiceSettleInvoiceWithCreditNoteRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerInvoicesServiceSettleInvoiceWithCreditNoteResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="cancelInvoice">
+      <soap12:operation soapAction="http://tempuri.org/LinerInvoicesService/cancelInvoice" style="document" />
+      <wsdl:input name="LinerInvoicesServiceCancelInvoiceRequest">
+        <soap12:header message="i0:LinerInvoicesServiceCancelInvoiceRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerInvoicesServiceCancelInvoiceResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="newInvoiceWithItems">
+      <soap12:operation soapAction="http://tempuri.org/LinerInvoicesService/newInvoiceWithItems" style="document" />
+      <wsdl:input name="LinerInvoicesServiceNewInvoiceWithItemsRequest">
+        <soap12:header message="i0:LinerInvoicesServiceNewInvoiceWithItemsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerInvoicesServiceNewInvoiceWithItemsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="pr_GenerateDepositISD">
+      <soap12:operation soapAction="http://tempuri.org/LinerInvoicesService/pr_GenerateDepositISD" style="document" />
+      <wsdl:input name="LinerInvoicesServicePr_GenerateDepositISDRequest">
+        <soap12:header message="i0:LinerInvoicesServicePr_GenerateDepositISDRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerInvoicesServicePr_GenerateDepositISDResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="pr_RecognizeCreditBalance">
+      <soap12:operation soapAction="http://tempuri.org/LinerInvoicesService/pr_RecognizeCreditBalance" style="document" />
+      <wsdl:input name="LinerInvoicesServicePr_RecognizeCreditBalanceRequest">
+        <soap12:header message="i0:LinerInvoicesServicePr_RecognizeCreditBalanceRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerInvoicesServicePr_RecognizeCreditBalanceResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="pr_CollectInvoice">
+      <soap12:operation soapAction="http://tempuri.org/LinerInvoicesService/pr_CollectInvoice" style="document" />
+      <wsdl:input name="LinerInvoicesServicePr_CollectInvoiceRequest">
+        <soap12:header message="i0:LinerInvoicesServicePr_CollectInvoiceRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerInvoicesServicePr_CollectInvoiceResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="newCreditNoteFromSaleOrder">
+      <soap12:operation soapAction="http://tempuri.org/LinerInvoicesService/newCreditNoteFromSaleOrder" style="document" />
+      <wsdl:input name="LinerInvoicesServiceNewCreditNoteFromSaleOrderRequest">
+        <soap12:header message="i0:LinerInvoicesServiceNewCreditNoteFromSaleOrderRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerInvoicesServiceNewCreditNoteFromSaleOrderResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="newCreditNoteWithItems">
+      <soap12:operation soapAction="http://tempuri.org/LinerInvoicesService/newCreditNoteWithItems" style="document" />
+      <wsdl:input name="LinerInvoicesServiceNewCreditNoteWithItemsRequest">
+        <soap12:header message="i0:LinerInvoicesServiceNewCreditNoteWithItemsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerInvoicesServiceNewCreditNoteWithItemsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="newCreditNote">
+      <soap12:operation soapAction="http://tempuri.org/LinerInvoicesService/newCreditNote" style="document" />
+      <wsdl:input name="LinerInvoicesServiceNewCreditNoteRequest">
+        <soap12:header message="i0:LinerInvoicesServiceNewCreditNoteRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerInvoicesServiceNewCreditNoteResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="newInvoice">
+      <soap12:operation soapAction="http://tempuri.org/LinerInvoicesService/newInvoice" style="document" />
+      <wsdl:input name="LinerInvoicesServiceNewInvoiceRequest">
+        <soap12:header message="i0:LinerInvoicesServiceNewInvoiceRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerInvoicesServiceNewInvoiceResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getInvoiceXML">
+      <soap12:operation soapAction="http://tempuri.org/LinerInvoicesService/getInvoiceXML" style="document" />
+      <wsdl:input name="LinerInvoicesServiceGetInvoiceXMLRequest">
+        <soap12:header message="i0:LinerInvoicesServiceGetInvoiceXMLRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerInvoicesServiceGetInvoiceXMLResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="pr_NewInvoiceWithItems">
+      <soap12:operation soapAction="http://tempuri.org/LinerInvoicesService/pr_NewInvoiceWithItems" style="document" />
+      <wsdl:input name="LinerInvoicesServicePr_NewInvoiceWithItemsRequest">
+        <soap12:header message="i0:LinerInvoicesServicePr_NewInvoiceWithItemsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerInvoicesServicePr_NewInvoiceWithItemsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_LinerPaymentsService" type="i0:LinerPaymentsService">
+    <wsp:PolicyReference URI="#NetTcpBinding_LinerPaymentsService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="newInvoiceByItemsMexTerra">
+      <soap12:operation soapAction="http://tempuri.org/LinerPaymentsService/newInvoiceByItemsMexTerra" style="document" />
+      <wsdl:input name="LinerPaymentsServiceNewInvoiceByItemsMexTerraRequest">
+        <soap12:header message="i0:LinerPaymentsServiceNewInvoiceByItemsMexTerraRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPaymentsServiceNewInvoiceByItemsMexTerraResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="newInvoicePayment">
+      <soap12:operation soapAction="http://tempuri.org/LinerPaymentsService/newInvoicePayment" style="document" />
+      <wsdl:input name="LinerPaymentsServiceNewInvoicePaymentRequest">
+        <soap12:header message="i0:LinerPaymentsServiceNewInvoicePaymentRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPaymentsServiceNewInvoicePaymentResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="paymentToCustomer">
+      <soap12:operation soapAction="http://tempuri.org/LinerPaymentsService/paymentToCustomer" style="document" />
+      <wsdl:input name="LinerPaymentsServicePaymentToCustomerRequest">
+        <soap12:header message="i0:LinerPaymentsServicePaymentToCustomerRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPaymentsServicePaymentToCustomerResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="pr_PaymentToCustomer">
+      <soap12:operation soapAction="http://tempuri.org/LinerPaymentsService/pr_PaymentToCustomer" style="document" />
+      <wsdl:input name="LinerPaymentsServicePr_PaymentToCustomerRequest">
+        <soap12:header message="i0:LinerPaymentsServicePr_PaymentToCustomerRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPaymentsServicePr_PaymentToCustomerResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="pr_ReturnDepositISD">
+      <soap12:operation soapAction="http://tempuri.org/LinerPaymentsService/pr_ReturnDepositISD" style="document" />
+      <wsdl:input name="LinerPaymentsServicePr_ReturnDepositISDRequest">
+        <soap12:header message="i0:LinerPaymentsServicePr_ReturnDepositISDRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPaymentsServicePr_ReturnDepositISDResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="newInvoiceByItemsAdvancePayment">
+      <soap12:operation soapAction="http://tempuri.org/LinerPaymentsService/newInvoiceByItemsAdvancePayment" style="document" />
+      <wsdl:input name="LinerPaymentsServiceNewInvoiceByItemsAdvancePaymentRequest">
+        <soap12:header message="i0:LinerPaymentsServiceNewInvoiceByItemsAdvancePaymentRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPaymentsServiceNewInvoiceByItemsAdvancePaymentResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="cancelPayment">
+      <soap12:operation soapAction="http://tempuri.org/LinerPaymentsService/cancelPayment" style="document" />
+      <wsdl:input name="LinerPaymentsServiceCancelPaymentRequest">
+        <soap12:header message="i0:LinerPaymentsServiceCancelPaymentRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPaymentsServiceCancelPaymentResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="pr_ReturnGuaranteeDeposit">
+      <soap12:operation soapAction="http://tempuri.org/LinerPaymentsService/pr_ReturnGuaranteeDeposit" style="document" />
+      <wsdl:input name="LinerPaymentsServicePr_ReturnGuaranteeDepositRequest">
+        <soap12:header message="i0:LinerPaymentsServicePr_ReturnGuaranteeDepositRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPaymentsServicePr_ReturnGuaranteeDepositResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="newInvoiceAdvancePayment">
+      <soap12:operation soapAction="http://tempuri.org/LinerPaymentsService/newInvoiceAdvancePayment" style="document" />
+      <wsdl:input name="LinerPaymentsServiceNewInvoiceAdvancePaymentRequest">
+        <soap12:header message="i0:LinerPaymentsServiceNewInvoiceAdvancePaymentRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPaymentsServiceNewInvoiceAdvancePaymentResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="confirmNewPayments">
+      <soap12:operation soapAction="http://tempuri.org/LinerPaymentsService/confirmNewPayments" style="document" />
+      <wsdl:input name="LinerPaymentsServiceConfirmNewPaymentsRequest">
+        <soap12:header message="i0:LinerPaymentsServiceConfirmNewPaymentsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPaymentsServiceConfirmNewPaymentsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getNewPayments">
+      <soap12:operation soapAction="http://tempuri.org/LinerPaymentsService/getNewPayments" style="document" />
+      <wsdl:input name="LinerPaymentsServiceGetNewPaymentsRequest">
+        <soap12:header message="i0:LinerPaymentsServiceGetNewPaymentsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPaymentsServiceGetNewPaymentsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reserve">
+      <soap12:operation soapAction="http://tempuri.org/LinerPaymentsService/reserve" style="document" />
+      <wsdl:input name="LinerPaymentsServiceReserveRequest">
+        <soap12:header message="i0:LinerPaymentsServiceReserveRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPaymentsServiceReserveResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="newInvoiceByItems">
+      <soap12:operation soapAction="http://tempuri.org/LinerPaymentsService/newInvoiceByItems" style="document" />
+      <wsdl:input name="LinerPaymentsServiceNewInvoiceByItemsRequest">
+        <soap12:header message="i0:LinerPaymentsServiceNewInvoiceByItemsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPaymentsServiceNewInvoiceByItemsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="returnToCustomer">
+      <soap12:operation soapAction="http://tempuri.org/LinerPaymentsService/returnToCustomer" style="document" />
+      <wsdl:input name="LinerPaymentsServiceReturnToCustomerRequest">
+        <soap12:header message="i0:LinerPaymentsServiceReturnToCustomerRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPaymentsServiceReturnToCustomerResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="advancePayment">
+      <soap12:operation soapAction="http://tempuri.org/LinerPaymentsService/advancePayment" style="document" />
+      <wsdl:input name="LinerPaymentsServiceAdvancePaymentRequest">
+        <soap12:header message="i0:LinerPaymentsServiceAdvancePaymentRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPaymentsServiceAdvancePaymentResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="transfer">
+      <soap12:operation soapAction="http://tempuri.org/LinerPaymentsService/transfer" style="document" />
+      <wsdl:input name="LinerPaymentsServiceTransferRequest">
+        <soap12:header message="i0:LinerPaymentsServiceTransferRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPaymentsServiceTransferResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="newInvoice">
+      <soap12:operation soapAction="http://tempuri.org/LinerPaymentsService/newInvoice" style="document" />
+      <wsdl:input name="LinerPaymentsServiceNewInvoiceRequest">
+        <soap12:header message="i0:LinerPaymentsServiceNewInvoiceRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPaymentsServiceNewInvoiceResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_LinerPurchaseOrderService" type="i0:LinerPurchaseOrderService">
+    <wsp:PolicyReference URI="#NetTcpBinding_LinerPurchaseOrderService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="receiveItems">
+      <soap12:operation soapAction="http://tempuri.org/LinerPurchaseOrderService/receiveItems" style="document" />
+      <wsdl:input name="LinerPurchaseOrderServiceReceiveItemsRequest">
+        <soap12:header message="i0:LinerPurchaseOrderServiceReceiveItemsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPurchaseOrderServiceReceiveItemsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchaseOrderItems">
+      <soap12:operation soapAction="http://tempuri.org/LinerPurchaseOrderService/getPurchaseOrderItems" style="document" />
+      <wsdl:input name="LinerPurchaseOrderServiceGetPurchaseOrderItemsRequest">
+        <soap12:header message="i0:LinerPurchaseOrderServiceGetPurchaseOrderItemsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPurchaseOrderServiceGetPurchaseOrderItemsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="devItems">
+      <soap12:operation soapAction="http://tempuri.org/LinerPurchaseOrderService/devItems" style="document" />
+      <wsdl:input name="LinerPurchaseOrderServiceDevItemsRequest">
+        <soap12:header message="i0:LinerPurchaseOrderServiceDevItemsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerPurchaseOrderServiceDevItemsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_LinerVendorService" type="i0:LinerVendorService">
+    <wsp:PolicyReference URI="#NetTcpBinding_LinerVendorService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="getVendorsByName">
+      <soap12:operation soapAction="http://tempuri.org/LinerVendorService/getVendorsByName" style="document" />
+      <wsdl:input name="LinerVendorServiceGetVendorsByNameRequest">
+        <soap12:header message="i0:LinerVendorServiceGetVendorsByNameRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerVendorServiceGetVendorsByNameResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getVendorsCompleteInfo">
+      <soap12:operation soapAction="http://tempuri.org/LinerVendorService/getVendorsCompleteInfo" style="document" />
+      <wsdl:input name="LinerVendorServiceGetVendorsCompleteInfoRequest">
+        <soap12:header message="i0:LinerVendorServiceGetVendorsCompleteInfoRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerVendorServiceGetVendorsCompleteInfoResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="confirmSyncNewVendors">
+      <soap12:operation soapAction="http://tempuri.org/LinerVendorService/confirmSyncNewVendors" style="document" />
+      <wsdl:input name="LinerVendorServiceConfirmSyncNewVendorsRequest">
+        <soap12:header message="i0:LinerVendorServiceConfirmSyncNewVendorsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerVendorServiceConfirmSyncNewVendorsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getFiltredVendors">
+      <soap12:operation soapAction="http://tempuri.org/LinerVendorService/getFiltredVendors" style="document" />
+      <wsdl:input name="LinerVendorServiceGetFiltredVendorsRequest">
+        <soap12:header message="i0:LinerVendorServiceGetFiltredVendorsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerVendorServiceGetFiltredVendorsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getNewVendorsInfo">
+      <soap12:operation soapAction="http://tempuri.org/LinerVendorService/getNewVendorsInfo" style="document" />
+      <wsdl:input name="LinerVendorServiceGetNewVendorsInfoRequest">
+        <soap12:header message="i0:LinerVendorServiceGetNewVendorsInfoRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerVendorServiceGetNewVendorsInfoResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getUpdateVendorsInfo">
+      <soap12:operation soapAction="http://tempuri.org/LinerVendorService/getUpdateVendorsInfo" style="document" />
+      <wsdl:input name="LinerVendorServiceGetUpdateVendorsInfoRequest">
+        <soap12:header message="i0:LinerVendorServiceGetUpdateVendorsInfoRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerVendorServiceGetUpdateVendorsInfoResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getVendorsByType">
+      <soap12:operation soapAction="http://tempuri.org/LinerVendorService/getVendorsByType" style="document" />
+      <wsdl:input name="LinerVendorServiceGetVendorsByTypeRequest">
+        <soap12:header message="i0:LinerVendorServiceGetVendorsByTypeRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerVendorServiceGetVendorsByTypeResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getVendorInfo">
+      <soap12:operation soapAction="http://tempuri.org/LinerVendorService/getVendorInfo" style="document" />
+      <wsdl:input name="LinerVendorServiceGetVendorInfoRequest">
+        <soap12:header message="i0:LinerVendorServiceGetVendorInfoRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerVendorServiceGetVendorInfoResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getVendorTermsOfPayment">
+      <soap12:operation soapAction="http://tempuri.org/LinerVendorService/getVendorTermsOfPayment" style="document" />
+      <wsdl:input name="LinerVendorServiceGetVendorTermsOfPaymentRequest">
+        <soap12:header message="i0:LinerVendorServiceGetVendorTermsOfPaymentRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LinerVendorServiceGetVendorTermsOfPaymentResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LinerServices">
+    <wsdl:port name="NetTcpBinding_LinerBankTransService" binding="tns:NetTcpBinding_LinerBankTransService">
+      <soap12:address location="net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>adminax@repmar.corp</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_LinerCurrenciesService" binding="tns:NetTcpBinding_LinerCurrenciesService">
+      <soap12:address location="net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>adminax@repmar.corp</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_LinerCustomerService" binding="tns:NetTcpBinding_LinerCustomerService">
+      <soap12:address location="net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>adminax@repmar.corp</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_LinerEmployeeService" binding="tns:NetTcpBinding_LinerEmployeeService">
+      <soap12:address location="net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>adminax@repmar.corp</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_LinerFreightChargesAndDelaysService" binding="tns:NetTcpBinding_LinerFreightChargesAndDelaysService">
+      <soap12:address location="net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>adminax@repmar.corp</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_LinerGuaranteeDepositService" binding="tns:NetTcpBinding_LinerGuaranteeDepositService">
+      <soap12:address location="net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>adminax@repmar.corp</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_LinerInvoicesService" binding="tns:NetTcpBinding_LinerInvoicesService">
+      <soap12:address location="net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>adminax@repmar.corp</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_LinerPaymentsService" binding="tns:NetTcpBinding_LinerPaymentsService">
+      <soap12:address location="net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>adminax@repmar.corp</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_LinerPurchaseOrderService" binding="tns:NetTcpBinding_LinerPurchaseOrderService">
+      <soap12:address location="net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>adminax@repmar.corp</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_LinerVendorService" binding="tns:NetTcpBinding_LinerVendorService">
+      <soap12:address location="net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://10.0.6.14:8201/DynamicsAx/Services/LinerServices</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>adminax@repmar.corp</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

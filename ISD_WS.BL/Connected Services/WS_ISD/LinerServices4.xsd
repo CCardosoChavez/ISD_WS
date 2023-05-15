@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Dynamics.Ax.Application" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.0.6.14:8101/DynamicsAx/Services/LinerServices?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" />
+  <xs:complexType name="RPM_LinerRemesaContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q1:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PendingRemesaAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RefRecIdLedgerTrans" type="xs:long" />
+          <xs:element minOccurs="0" name="exchRateRemesa" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RPM_LinerRemesaContract" nillable="true" type="tns:RPM_LinerRemesaContract" />
+  <xs:complexType name="zCustomerContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q2:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustomerId" type="xs:long" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="zCustomerContract" nillable="true" type="tns:zCustomerContract" />
+  <xs:complexType name="zCustomerInfoContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q3:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Account" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CAAT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerId" type="xs:long" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="District" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InteriorNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RFC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StreetNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="contactEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="contactPhone" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="zCustomerInfoContract" nillable="true" type="tns:zCustomerInfoContract" />
+  <xs:complexType name="zInvoiceItemContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q4:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContainerSize" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContainerState" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContainerType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HaveTax16" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HaveTax4" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Movement" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Quantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="itemId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="zInvoiceItemContract" nillable="true" type="tns:zInvoiceItemContract" />
+  <xs:complexType name="zLinerPendingBankRecordContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q5:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AuxilaryField" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankRecordAccountId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankRecordAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BankRecordAppliedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BankRecordCurrency" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankRecordDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="BankRecordDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankRecordId" type="xs:long" />
+          <xs:element minOccurs="0" name="BankRecordOriginalAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DocumentNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="zLinerPendingBankRecordContract" nillable="true" type="tns:zLinerPendingBankRecordContract" />
+  <xs:complexType name="zNewPaymentsSummaryContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q6:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvoiceId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PaymentId" type="xs:long" />
+          <xs:element minOccurs="0" name="PaymentType" type="tns:zInvoiceType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="zNewPaymentsSummaryContract" nillable="true" type="tns:zNewPaymentsSummaryContract" />
+  <xs:simpleType name="zInvoiceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Invoice" />
+      <xs:enumeration value="ChargeNote" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="zInvoiceType" nillable="true" type="tns:zInvoiceType" />
+  <xs:complexType name="zPurchaseOrderItemsContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q7:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LineInventId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Quantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RemainQuantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RfcCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UUID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="zPurchaseOrderItemsContract" nillable="true" type="tns:zPurchaseOrderItemsContract" />
+  <xs:complexType name="zSalesEmployeeContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q8:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EmployeeID" type="xs:long" />
+          <xs:element minOccurs="0" name="EmployeeName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="zSalesEmployeeContract" nillable="true" type="tns:zSalesEmployeeContract" />
+  <xs:complexType name="zTermOfPaymentContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q9:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DescriptionT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumberOfDays" type="xs:int" />
+          <xs:element minOccurs="0" name="NumberOfMonths" type="xs:int" />
+          <xs:element minOccurs="0" name="PaymentTermId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="zTermOfPaymentContract" nillable="true" type="tns:zTermOfPaymentContract" />
+  <xs:complexType name="zVendorContactContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q10:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RFC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="zVendorContactContract" nillable="true" type="tns:zVendorContactContract" />
+  <xs:complexType name="zVendorContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q11:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VendorId" type="xs:long" />
+          <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="zVendorContract" nillable="true" type="tns:zVendorContract" />
+  <xs:complexType name="zVendorInfoContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q12:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerId" type="xs:long" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="District" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RFC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StreetNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="contactEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="contactPhone" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="zVendorInfoContract" nillable="true" type="tns:zVendorInfoContract" />
+  <xs:complexType name="zVendorInvoiceItemContract">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp" base="q13:XppObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RetAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TaxAmount" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="zVendorInvoiceItemContract" nillable="true" type="tns:zVendorInvoiceItemContract" />
+  <xs:complexType name="ArrayOfzLinerPendingBankRecordContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="zLinerPendingBankRecordContract" nillable="true" type="tns:zLinerPendingBankRecordContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfzLinerPendingBankRecordContract" nillable="true" type="tns:ArrayOfzLinerPendingBankRecordContract" />
+  <xs:simpleType name="RPM_OpTypeRefPaym">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ninguno" />
+      <xs:enumeration value="CargosLocales" />
+      <xs:enumeration value="DepositosGarantia" />
+      <xs:enumeration value="CartaEncomienda" />
+      <xs:enumeration value="ISD" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RPM_OpTypeRefPaym" nillable="true" type="tns:RPM_OpTypeRefPaym" />
+  <xs:complexType name="ArrayOfzCustomerInfoContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="zCustomerInfoContract" nillable="true" type="tns:zCustomerInfoContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfzCustomerInfoContract" nillable="true" type="tns:ArrayOfzCustomerInfoContract" />
+  <xs:complexType name="ArrayOfzCustomerContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="zCustomerContract" nillable="true" type="tns:zCustomerContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfzCustomerContract" nillable="true" type="tns:ArrayOfzCustomerContract" />
+  <xs:complexType name="ArrayOfzSalesEmployeeContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="zSalesEmployeeContract" nillable="true" type="tns:zSalesEmployeeContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfzSalesEmployeeContract" nillable="true" type="tns:ArrayOfzSalesEmployeeContract" />
+  <xs:complexType name="ArrayOfzInvoiceItemContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="zInvoiceItemContract" nillable="true" type="tns:zInvoiceItemContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfzInvoiceItemContract" nillable="true" type="tns:ArrayOfzInvoiceItemContract" />
+  <xs:complexType name="ArrayOfRPM_LinerRemesaContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RPM_LinerRemesaContract" nillable="true" type="tns:RPM_LinerRemesaContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRPM_LinerRemesaContract" nillable="true" type="tns:ArrayOfRPM_LinerRemesaContract" />
+  <xs:simpleType name="RPM_InvoiceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Import" />
+      <xs:enumeration value="Export" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RPM_InvoiceType" nillable="true" type="tns:RPM_InvoiceType" />
+  <xs:complexType name="ArrayOfzVendorInvoiceItemContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="zVendorInvoiceItemContract" nillable="true" type="tns:zVendorInvoiceItemContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfzVendorInvoiceItemContract" nillable="true" type="tns:ArrayOfzVendorInvoiceItemContract" />
+  <xs:complexType name="ArrayOfzNewPaymentsSummaryContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="zNewPaymentsSummaryContract" nillable="true" type="tns:zNewPaymentsSummaryContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfzNewPaymentsSummaryContract" nillable="true" type="tns:ArrayOfzNewPaymentsSummaryContract" />
+  <xs:complexType name="ArrayOfzPurchaseOrderItemsContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="zPurchaseOrderItemsContract" nillable="true" type="tns:zPurchaseOrderItemsContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfzPurchaseOrderItemsContract" nillable="true" type="tns:ArrayOfzPurchaseOrderItemsContract" />
+  <xs:complexType name="ArrayOfzVendorContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="zVendorContract" nillable="true" type="tns:zVendorContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfzVendorContract" nillable="true" type="tns:ArrayOfzVendorContract" />
+  <xs:complexType name="ArrayOfzVendorInfoContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="zVendorInfoContract" nillable="true" type="tns:zVendorInfoContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfzVendorInfoContract" nillable="true" type="tns:ArrayOfzVendorInfoContract" />
+</xs:schema>
